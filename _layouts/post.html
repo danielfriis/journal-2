@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h1 class="text-4xl mb-12">{{ page.title | escape}}</h1>
+<p class="text-sm text-zinc-400 mb-4">
+  <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
+  {% if page.modified %}
+    {% if page.modified != page.date %}
+      &mdash; Updated
+      <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%B %e, %Y" }}</time>
+    {% endif %}
+  {% endif %}
+</p>
+
+<div class="formatted-content">
+  {{ content }}
+</div>

@@ -1,0 +1,22 @@
+title: "" # the name of your site, e.g. ACME Corp.
+description: ""
+lang: en-US # default lang
+timezone: Europe/Copenhagen # set your timezone
+
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+permalink: /:title/
+
+defaults:
+  - values:
+      layout: post
+
+plugins:
+  - jekyll-postcss
+
+postcss:
+  cache: false
+
+include:
+  - _pages
+  - .htaccess

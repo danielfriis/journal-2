@@ -1,0 +1,36 @@
+---
+---
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .formatted-content p {
+    @apply text-zinc-600 mb-3;
+  }
+
+  .formatted-content h2 {
+    @apply text-2xl text-zinc-800 mt-9 mb-3;
+  }
+
+  .formatted-content h3 {
+    @apply text-xl text-zinc-800 mt-6 mb-3;
+  }
+  
+  .formatted-content h4 {
+    @apply text-lg text-zinc-800 mt-6 mb-3;
+  }
+
+  .formatted-content figure > blockquote p {
+    @apply text-2xl mt-8 pb-4 pr-12 text-zinc-900;
+  }
+
+  .formatted-content figure > blockquote + figcaption {
+    @apply not-italic pb-8 pr-10 text-right text-zinc-600;
+  }
+
+  .formatted-content figure > blockquote + figcaption::before {
+    content: "—";
+  }
+}
