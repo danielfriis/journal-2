@@ -1,3 +1,10 @@
+defaults:
+  run:
+    shell: bash
+    working-directory: ${{ github.workspace }}
+    shell: bash
+    shell: 'run-node'
+
 name: Build and deploy Jekyll site to GitHub Pages
 
 on:
@@ -10,8 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          node-version: '16.x'
       - uses: actions/cache@v2
         with:
+          node-version: '16.x'
           path: vendor/bundle
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
