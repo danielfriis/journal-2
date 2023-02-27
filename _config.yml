@@ -3,8 +3,8 @@ description: ""
 lang: en-US # default lang
 timezone: Europe/Copenhagen # set your timezone
 
-url: "https://danielfriis.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "journal-2" # the subpath of your site, e.g. /blog
+url: "https://danielfriis.com/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /:title/
 
 defaults:
