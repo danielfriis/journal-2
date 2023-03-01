@@ -7,7 +7,7 @@
 
 @layer base {
   .formatted-content p {
-    @apply text-zinc-600 mb-3;
+    @apply text-zinc-600 mb-4;
   }
 
   .formatted-content h2 {
