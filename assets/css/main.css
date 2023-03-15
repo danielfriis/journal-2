@@ -7,11 +7,11 @@
 
 @layer base {
   .formatted-content p, ol {
-    @apply text-zinc-600 dark:text-slate-300 dark:font-light mb-4;
+    @apply text-zinc-600 dark:text-zinc-300 dark:font-light mb-4;
   }
 
   .formatted-content p a {
-    @apply text-zinc-700 dark:text-slate-300 dark:hover:text-white underline;
+    @apply text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white underline;
   }
 
   .formatted-content ol {
@@ -19,23 +19,23 @@
   }
 
   .formatted-content h2 {
-    @apply text-2xl text-zinc-800 mt-9 mb-3;
+    @apply text-2xl text-zinc-800 dark:text-zinc-100 mt-9 mb-3;
   }
 
   .formatted-content h3 {
-    @apply text-xl text-zinc-800 mt-6 mb-3;
+    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-6 mb-3;
   }
   
   .formatted-content h4 {
-    @apply text-lg text-zinc-800 mt-6 mb-3;
+    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6 mb-3;
   }
 
   .formatted-content figure > blockquote p {
-    @apply text-2xl mt-8 pb-4 pr-12 text-zinc-900;
+    @apply text-2xl mt-8 pb-4 pr-12 text-zinc-900 dark:text-zinc-100;
   }
 
   .formatted-content figure > blockquote + figcaption {
-    @apply not-italic pb-8 pr-10 text-right text-zinc-600;
+    @apply not-italic pb-8 pr-10 text-right text-zinc-600 dark:text-zinc-400 dark:font-light;
   }
 
   .formatted-content figure > blockquote + figcaption::before {

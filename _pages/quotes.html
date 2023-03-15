@@ -1,0 +1,17 @@
+---
+title: Quotes
+permalink: /quotes/
+layout: default
+excerpt: All Quotes
+---
+
+{%- for quote in site.quotes -%}
+  <article class="flex flex-row mb-2">
+    <div class="flex">
+      <p>
+        {{ quote.content }}
+        {{ quote.author }}
+      </p>
+    </div>
+  </article>
+{%- endfor -%}

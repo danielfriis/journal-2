@@ -3,7 +3,7 @@ layout: default
 ---
 
 <h1 class="text-4xl mb-12 dark:text-white">{{ page.title | escape}}</h1>
-<p class="text-sm text-zinc-400 dark:text-slate-400 mb-4">
+<p class="text-sm text-zinc-400 dark:text-zinc-400 mb-4">
   <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
   {% if page.modified %}
     {% if page.modified != page.date %}
