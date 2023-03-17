@@ -7,11 +7,11 @@ excerpt: All Quotes
 
 <div class="grid grid-cols-10">
   {%- for quote in site.quotes -%}
-    <div class="lg:text-right col-span-10 lg:col-span-1">
-      <span class="text-xs font-mono text-zinc-400">{{ quote.id }}</span>
+    <div class="lg:text-right col-span-10 lg:col-span-1 mb-3">
+      <span class="text-xs font-mono font-light text-zinc-400">{{ quote.id }}</span>
     </div>
     <div class="hidden lg:block"></div>
-    <div class="col-span-9">
+    <div class="col-span-9 lg:col-span-5">
       {% include quote.html content=quote.content author=quote.author source=quote.source %}
     </div>
   {%- endfor -%}
