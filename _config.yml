@@ -8,6 +8,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 permalink: /:collection/:title/
 
 collections:
+  posts:
+    permalink: /notes/:title/
   quotes:
 
 defaults:

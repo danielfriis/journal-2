@@ -13,12 +13,7 @@ Beyond living in the future and putting off happiness, it’s also an ineffectiv
 
 I recently stumbled upon a quote by the greek stoic philosopher, Epictetus, who once said, “The more we value things outside our control, the less control we have”. That’s precisely the problem with focussing too much on goals. By valuing things that are not real, we lose control and, in turn, jeopardize our happiness.
 
-<figure >
-  <blockquote>
-    <p>The more we value things outside our control, the less control we have.</p>
-  </blockquote>
-  <figcaption>Epictetus, <cite>Discourses and Selected Writings</cite></figcaption>
-</figure>
+{% include quote.html content="The more we value things outside our control, the less control we have." author="Epictetus" source="Discourses and Selected Writings" %}
 
 The way to regain control and put happiness into the present is by learning to love the challenge more than the potential reward. When you do that, you are successful every time you address the challenge. People focussing on goals are only successful when those goals are reached. Additionally, it will also make you more likely to achieve your goals in the first place.
 

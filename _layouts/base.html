@@ -1,0 +1,24 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body class="flex bg-stone-50 dark:bg-zinc-900">
+    <div class="grid grid-cols-12 lg:flex-row lg:px-20 lg:mt-20 lg:mb-20 px-3 mt-10 mb-10 mx-auto container">
+      <header class="col-span-12 lg:col-span-2"">
+        <span class="text-lg text-zinc-800 dark:text-white mb-6 block">
+            <a href="/">
+              Daniel Friis
+            </a>
+        </span>
+      </header>
+      {{ content }}
+    </div>
+  </body>
+</html>

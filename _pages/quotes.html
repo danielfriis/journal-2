@@ -1,17 +1,18 @@
 ---
 title: Quotes
 permalink: /quotes/
-layout: default
+layout: quotes
 excerpt: All Quotes
 ---
 
-{%- for quote in site.quotes -%}
-  <article class="flex flex-row mb-2">
-    <div class="flex">
-      <p>
-        {{ quote.content }}
-        {{ quote.author }}
-      </p>
+<div class="grid grid-cols-10">
+  {%- for quote in site.quotes -%}
+    <div class="lg:text-right col-span-10 lg:col-span-1">
+      <span class="text-xs font-mono text-zinc-400">{{ quote.id }}</span>
     </div>
-  </article>
-{%- endfor -%}
+    <div class="hidden lg:block"></div>
+    <div class="col-span-9">
+      {% include quote.html content=quote.content author=quote.author source=quote.source %}
+    </div>
+  {%- endfor -%}
+</div>

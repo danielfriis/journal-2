@@ -1,0 +1,6 @@
+<figure class="mb-10 lg:pr-10">
+  <blockquote>
+    <p class="mb-4 text-slate-900 font-light text-2xl before:content-[open-quote] after:content-[close-quote]">{{ include.content | strip_html }}</p>
+  </blockquote>
+  <figcaption class="text-xs font-light text-right">— {{ include.author }}{% if include.source %}, <cite>{{ include.source }}</cite>{% endif %}</figcaption>
+</figure>
