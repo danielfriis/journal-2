@@ -12,12 +12,7 @@ At one point, after nearly three years in a new and challenging job, I had the o
 
 That’s when I decided to try and capture my learnings and do so moving forward as I learn new things. Writing helps me clarify my thoughts and uncover gaps in my knowledge, thereby actively helping me escape the Dunning-Kruger effect.
 
-<figure >
-  <blockquote>
-    <p>We do not learn from experience. We learn from reflecting on our experience.</p>
-  </blockquote>
-  <figcaption>John Dewey <cite></cite></figcaption>
-</figure>
+{% include quote.html content="We do not learn from experience. We learn from reflecting on our experience." author="John Dewey" %}
 
 I’ve chosen to capture my learnings in the format of ‘notes’ because what I write is not, and will not, be the objective truth. It is simply my observation of the world and what I reason from it. 
 

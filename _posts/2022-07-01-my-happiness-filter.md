@@ -29,6 +29,8 @@ On the other hand, spending time alone is an opportunity for me to recharge. I u
 
 Finally, filling my mind with happy thoughts, means there’s less room for sad thoughts. So, I try to spend five minutes every night listing three good things that happened to me on that day. It’s a great way to end the day, and I usually take those memories with me to bed as I fall asleep.
 
+---
+
 Those five habits above are what make up my happiness filter. 9 out of 10 times where I find myself sad or discouraged, it’s because I’ve neglected some of them. Practising the neglected habits will instantly get me back to a good place.
 
 Which habits bring you joy? They are usually easy to relegate and neglect in a busy schedule — but don’t. They are vitally important to your happiness and likely also to your effectiveness.

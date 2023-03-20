@@ -2,5 +2,5 @@
   <blockquote>
     <p class="mb-4 text-zinc-900 dark:text-white font-light text-2xl before:content-[open-quote] after:content-[close-quote]">{{ include.content | strip_html }}</p>
   </blockquote>
-  <figcaption class="text-xs font-light dark:text-zinc-400 text-right">— {{ include.author }}{% if include.source %}, <cite>{{ include.source }}</cite>{% endif %}</figcaption>
+  {% if include.author %}<figcaption class="text-xs font-light dark:text-zinc-400 text-right">— {{ include.author }}{% if include.source %}, <cite>{{ include.source }}</cite>{% endif %}</figcaption>{% endif %}
 </figure>
