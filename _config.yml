@@ -23,6 +23,12 @@ plugins:
 postcss:
   cache: false
 
+jekyll_compose:
+    auto_open: true
+    default_front_matter:
+      drafts:
+        description:
+
 include:
   - _pages
   - .htaccess
