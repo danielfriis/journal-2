@@ -1,7 +1,43 @@
 ---
-layout: base
 ---
 
-<main class="col-span-12 lg:col-span-5" aria-label="Content">
-  {{ content }}
-</main>
+{% assign content_cols = page.content_cols | default: 6 %}
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    {% if page.title == site.title %}
+      <title>{{ site.title }}</title>
+    {% else %}
+      <title>{{ page.title }} — {{ site.title }}</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body class="grid grid-cols-12 px-5 mt-12 mb-20 bg-stone-50 dark:bg-zinc-900">
+    <header class="col-span-12 mb-10 lg:col-span-{{ 12 | minus: content_cols }} pr-20 lg:sticky lg:h-fit lg:top-5">
+      <h1 class="text-4xl font-serif mb-5">{{ page.title }}</h1>
+      <span class="text-xs font-light text-zinc-400 dark:text-zinc-400">
+        {% if page.date %}
+          Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
+        {% endif %}
+        {% if page.modified %}
+          {% if page.modified != page.date %}
+            &mdash; Updated
+            <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%B %e, %Y" }}</time>
+          {% endif %}
+        {% endif %}
+      </span>
+      <span class="text-xs font-light text-zinc-400 dark:text-white block">
+        ©️ {{ site.time | date: "%Y" }}
+          <a href="/">
+            Daniel Friis
+          </a>
+      </span>
+    </header>
+    <main class="col-span-12 lg:col-span-{{ content_cols }}" aria-label="Content">
+      {{ content }}
+    </main>
+  </body>
+</html>

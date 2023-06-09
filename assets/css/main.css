@@ -7,7 +7,7 @@
 
 @layer base {
   .formatted-content > p, .formatted-content > ol {
-    @apply text-zinc-600 dark:text-zinc-300 dark:font-light mb-4;
+    @apply leading-relaxed text-zinc-600 dark:text-zinc-300 dark:font-light mb-4;
   }
 
   .formatted-content > figure {

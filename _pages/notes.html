@@ -3,22 +3,30 @@ title: Notes
 permalink: /notes/
 layout: default
 excerpt: All Notes
+content_cols: 8
 ---
 
-{%- for post in site.posts -%}
-  {%- capture current_year -%}{{ post.date | date: "%Y" }}{%- endcapture -%}
-  {%- unless current_year == previous_year -%}
-    <h2 class="text-lg mb-2 [&:not(:first-child)]:mt-4 dark:text-white">{{ current_year }}</h2>
-    {%- assign previous_year = current_year -%}
-  {%- endunless -%}
-    <article class="flex flex-row mb-2">
-      <div class="flex">
-        <h4 class="text-zinc-600 dark:text-slate-300 dark:hover:text-white dark:font-light">
-          <a href="{{ post.url }}">{{ post.title | escape }}</a>
-        </h4>
-        <span class="ml-2 text-zinc-400 font-light dark:font-extralight">
-          {{ post.date | date: "%b %e" }}
-        </span>
-      </div>
-    </article>
+{% assign notes_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+{%- for year in notes_by_year -%}
+  <div class="grid grid-cols-10 mb-5">
+    <div class="col-span-10 lg:col-span-2">
+      <span class="leading-6 text-xs font-light text-zinc-400">
+        {{ year.name }}
+      </span>
+    </div>
+    <div class="col-span-10 lg:col-span-8">
+      {%- for post in year.items -%}
+        <article class="flex flex-row mb-2">
+          <span class="w-20 leading-6 text-xs font-light text-zinc-400 shrink-0">
+            {{ post.date | date: "%b %e" }}
+          </span>
+
+          <h4 class="leading-6 text-zinc-600 dark:text-slate-300 dark:hover:text-white dark:font-light grow-0">
+            <a href="{{ post.url }}">{{ post.title | escape }}</a>
+          </h4>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
 {%- endfor -%}
