@@ -7,6 +7,7 @@ module.exports = {
     './_posts/*.md',
     './*.md',
     './*.html',
+    './src/**/*.{html,js}'
   ],
   safelist: [
     'col-span-1',
@@ -32,9 +33,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        // sans: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'sans-serif']
-      }
+      fontFamily: {}
     }
   },
   plugins: []
