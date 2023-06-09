@@ -6,4 +6,5 @@ gem 'webrick'
 group :jekyll_plugins do
   gem "jekyll-postcss"
   gem "jekyll-compose"
+  gem "mini_magick"
 end

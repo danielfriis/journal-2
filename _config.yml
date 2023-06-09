@@ -32,3 +32,4 @@ jekyll_compose:
 include:
   - _pages
   - .htaccess
+  - assets/og_images
