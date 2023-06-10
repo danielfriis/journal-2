@@ -11,7 +11,7 @@ content_cols: 8
 {%- for year in notes_by_year -%}
   <div class="grid grid-cols-10 mb-5">
     <div class="col-span-10 mb-3 lg:mb-0 lg:col-span-2">
-      <span class="leading-6 text-xs font-light lg:text-zinc-400">
+      <span class="leading-6 text-xs font-light lg:text-zinc-400 dark:text-white lg:dark:text-zinc-400">
         {{ year.name }}
       </span>
     </div>
@@ -22,7 +22,7 @@ content_cols: 8
             {{ post.date | date: "%b %e" }}
           </span>
 
-          <h4 class="leading-6 text-zinc-600 dark:text-slate-300 dark:hover:text-white dark:font-light grow-0">
+          <h4 class="leading-6 text-zinc-600 dark:text-zinc-300 dark:hover:text-white dark:font-light grow-0">
             <a href="{{ post.url }}">{{ post.title | escape }}</a>
           </h4>
         </article>
