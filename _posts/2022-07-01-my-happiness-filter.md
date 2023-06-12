@@ -1,13 +1,13 @@
 ---
-title: My happiness filter
+title: My Happiness Stack
 date: 2022-07-01 08:49:10 +02:00
-description: A few specific habits are vital to my mental health. I've identified them and practice them everyday. Together, they make up my 'Happiness Filter'.
+description: A few specific habits are vital to my mental health. I've identified them and practice them everyday. Together, they make up my 'Happiness Stack'.
 image:
 ---
 
-Like most people, I’ve had ups and downs throughout my life. I’ve come to accept them and expect them as part of being human. But recently, I’ve realised how I can set myself up for more happy emotions than sad ones. I’ve named this setup my ‘Happiness Filter’ and it consists of five habits which positively influence the way I experience the world.
+Like most people, I’ve had ups and downs throughout my life. I’ve come to accept them and expect them as part of being human. But recently, I’ve realised how I can set myself up for more happy emotions than sad ones. I’ve named this setup my ‘Happiness Stack’ and it consists of five habits which positively influence the way I experience the world.
 
-On any given day, it’s the small things that may throw me into a high or low; a compliment from a stranger, a ray of sunshine, a misplaced piece of clothing, or the rain when I’m biking. How I feel about any of those situations depends immensely on the condition of my ‘Happiness Filter’.
+On any given day, it’s the small things that may throw me into a high or low; a compliment from a stranger, a ray of sunshine, a misplaced piece of clothing, or the rain when I’m biking. How I feel about any of those situations depends immensely on the condition of my ‘Happiness Stack’.
 
 **Exercise**
 
@@ -31,6 +31,6 @@ Finally, filling my mind with happy thoughts, means there’s less room for sad 
 
 ---
 
-Those five habits above are what make up my happiness filter. 9 out of 10 times where I find myself sad or discouraged, it’s because I’ve neglected some of them. Practising the neglected habits will instantly get me back to a good place.
+Those five habits above are what make up my happiness Stack. 9 out of 10 times where I find myself sad or discouraged, it’s because I’ve neglected some of them. Practising the neglected habits will instantly get me back to a good place.
 
 Which habits bring you joy? They are usually easy to relegate and neglect in a busy schedule — but don’t. They are vitally important to your happiness and likely also to your effectiveness.

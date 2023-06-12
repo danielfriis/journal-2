@@ -1,5 +1,5 @@
 ---
-title: Innovation is not an act of discovery but creation.
+title: Innovation is not an act of discovery but creation
 description: Innovation is not an act of discovery but creation.
 date: 2023-03-23 11:58:00 +0100
 ---
