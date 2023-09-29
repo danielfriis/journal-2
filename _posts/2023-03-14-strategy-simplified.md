@@ -1,5 +1,5 @@
 ---
-title: Strategy Simplified
+title: Strategy, simplified
 description: An updated and simplified take on strategy
 date: 2023-03-14 22:14 +0100
 ---
