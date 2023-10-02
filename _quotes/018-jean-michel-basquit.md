@@ -1,0 +1,5 @@
+---
+author: Jean-Michel Basquiat
+---
+
+Art is how we decorate space, music is how we decorate time.
