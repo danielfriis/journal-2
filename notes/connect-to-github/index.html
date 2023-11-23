@@ -1,0 +1,117 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+      <title>(Re-)connect to Github — Daniel Friis</title>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+  </head>
+  <body class="grid grid-cols-12 px-5 mt-12 mb-20 bg-stone-50 dark:bg-zinc-900">
+    <header class="col-span-12 mb-10 lg:col-span-6 lg:pr-20 lg:sticky lg:h-fit lg:top-5">
+      <h1 class="text-4xl font-serif mb-3 dark:text-zinc-300">(Re-)connect to Github</h1>
+      
+      <span class="text-xs font-light text-zinc-400">
+        
+          Published <time datetime="2023-11-23T09:35:00+01:00">November 23, 2023</time>
+        
+        
+      </span>
+      <span class="text-xs font-light text-zinc-400 block">
+        &COPY; 2023
+        <a href="/">
+          Daniel Friis
+        </a>
+      </span>
+    </header>
+    <main class="col-span-12 lg:col-span-6" aria-label="Content">
+      <div class="formatted-content">
+  <p>I recently had to reset my computer and get it back up and running for coding which for the most part when super smooth with most things being in the cloud these days.</p>
+
+<p>However, when I had to do my first push after the reset, I received this error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% git push origin HEAD
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre></div></div>
+
+<p>After doing a bit of googling, it wasn’t really clear to me how to ‘log back into’ Github. It seemed like it was necessary to add some sort of personal access token.</p>
+
+<p>However, I found that the easiest thing was to connect to Github using a SSH key.</p>
+
+<p>You set it up like this:</p>
+
+<h3 id="step-1-generate-key">Step 1: Generate key</h3>
+
+<p>Run this command: <code class="language-plaintext highlighter-rouge">ssh-keygen -t rsa -b 4096 -C 'your@email.com'</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% ssh-keygen -t rsa -b 4096 -C 'your@email.com'
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/username/.ssh/id_rsa): enter
+Enter passphrase (empty for no passphrase): enter
+Enter same passphrase again: enter
+</code></pre></div></div>
+
+<p>Just press enter when it asks for a file and passphrase.</p>
+
+<p>Now, you have a key saved as <code class="language-plaintext highlighter-rouge">id_rsa</code> in your <code class="language-plaintext highlighter-rouge">.ssh</code> folder.</p>
+
+<p>Verify it by running this command: <code class="language-plaintext highlighter-rouge">ls ~/.ssh/</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% ls ~/.ssh/
+id_rsa		id_rsa.pub	known_hosts
+</code></pre></div></div>
+
+<h3 id="step-2-copy-key">Step 2: Copy key</h3>
+
+<p>Next, run this command to read the content of your key: <code class="language-plaintext highlighter-rouge">cat ~/.ssh/id_rsa.pub</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% cat ~/.ssh/id_rsa.pub
+ssh-rsa AAA[...]zQ4Sw== your@email.com
+</code></pre></div></div>
+
+<p>Copy the key to your clipboard (starting with ‘ssh-rsa’ and ending with ‘your@email.com’).</p>
+
+<h3 id="step-3-add-to-github">Step 3: Add to Github</h3>
+
+<ol>
+  <li>Go to github.com &gt; Settings &gt; SSH And GPG keys.</li>
+  <li>Click ‘New SSH Key’.</li>
+  <li>Give a descriptive title. I’d use something to identify the device/computer your are using.</li>
+  <li>Select ‘Authentication Key’ as the key type.</li>
+  <li>Paste the key.</li>
+  <li>Click ‘Add SSH Key’.</li>
+</ol>
+
+<h3 id="step-4-authenticate">Step 4: Authenticate</h3>
+
+<p>Authenticate using your new SSH key by running this command: <code class="language-plaintext highlighter-rouge">ssh -T git@github.com</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% ssh -T git@github.com
+
+Hi USERNAME! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></div>
+
+<h3 id="step-5-get-back-to-work">Step 5: Get back to work</h3>
+
+<p>That’s it! Now, whenever you push to Github it uses your SSH key and life is a breeze again.</p>
+
+</div>
+<div class="mt-10">
+  <a class="text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white" href="/notes">← Back to all notes</a>
+</div>
+<div class="pt-20">
+  <p class="text-xs font-light text-zinc-400 dark:text-zinc-400">
+    There will be typos, half-baked ideas, and opinions presented as facts here. I'm not a professional writer, and I'm not trying to be one. I'm writing these notes as an exercise to clarify my thinking and archive insights worth revisiting. If you find it useful, that's great. If you don't, that's fine too.
+  </p>
+</div>
+
+    </main>
+  </body>
+</html>
