@@ -37,4 +37,16 @@
   .formatted-content h4 {
     @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6 mb-3;
   }
+
+  .formatted-content code, .formatted-content pre.highlight {
+    @apply whitespace-pre-line text-sm bg-neutral-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-200 max-w-full;
+  }
+
+  .formatted-content code {
+    @apply py-1 px-1.5 rounded-md;
+  }
+
+  .formatted-content pre.highlight {
+    @apply py-3 px-4 rounded-lg mb-4;
+  }
 }

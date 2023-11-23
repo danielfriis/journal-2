@@ -1,6 +1,6 @@
 ---
 title: Self-doubt
-description: Fuck it. Trust yourself, take the chance, and run the risk.
+description: Trust yourself, take the chance, and run the risk.
 date: 2023-05-25 13:18 +0200
 ---
 
