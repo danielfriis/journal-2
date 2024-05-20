@@ -3,19 +3,18 @@ title: Notes
 permalink: /notes/
 layout: default
 excerpt: All Notes
-content_cols: 8
 ---
 
 {% assign notes_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 {%- for year in notes_by_year -%}
   <div class="grid grid-cols-10 mb-5">
-    <div class="col-span-10 mb-3 lg:mb-0 lg:col-span-2">
-      <span class="leading-6 text-xs font-light lg:text-zinc-400 dark:text-white lg:dark:text-zinc-400">
+    <div class="col-span-10 mb-3">
+      <span class="leading-6 text-xs dark:text-white">
         {{ year.name }}
       </span>
     </div>
-    <div class="col-span-10 lg:col-span-8">
+    <div class="col-span-10">
       {%- for post in year.items -%}
         <article class="flex flex-row mb-2">
           <span class="w-20 leading-6 text-xs font-light text-zinc-400 shrink-0">

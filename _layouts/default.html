@@ -1,8 +1,6 @@
 ---
 ---
 
-{% assign content_cols = page.content_cols | default: 6 %}
-
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -15,10 +13,10 @@
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   </head>
-  <body class="px-5 lg:pl-40 max-w-screen-md mt-12 mb-20 bg-stone-50 dark:bg-zinc-900">
+  <body class="px-5 lg:pl-40 max-w-screen-md mt-2 mb-20 bg-stone-50 dark:bg-zinc-900">
     <header class="mb-20 lg:pr-20">
+      {% include breadcrumbs.html %}
       <h1 class="text-5xl font-serif mb-3 dark:text-zinc-300">{{ page.title }}</h1>
-      {% comment %}{% include breadcrumbs.html %}{% endcomment %}
       <span class="text-xs font-light text-zinc-400">
         {% if page.date %}
           Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
