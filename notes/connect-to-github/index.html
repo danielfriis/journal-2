@@ -8,13 +8,11 @@
     
     <link rel="stylesheet" href="/assets/css/main.css">
   </head>
-  <body class="px-5 lg:pl-40 max-w-screen-md mt-2 mb-20 bg-stone-50 dark:bg-zinc-900">
-    <header class="pt-10 mb-20 lg:pr-20 flex flex-col gap-3">
-      <div class="flex flex-col">
-        <h1 class="text-5xl font-serif mb-3 dark:text-zinc-300">(Re-)connect to Github</h1>
-        <div class="text-xs font-light text-zinc-400 truncate">
+  <body class="container max-w-screen-sm mx-auto mt-2 mb-20 bg-stone-50 dark:bg-zinc-900">
+    <header class="pt-10 mb-20 lg:pr-20 flex flex-col gap-3 ">
+      <div class="text-xs font-light text-zinc-400 truncate">
   
-  / <a href="/">danielfriis.com</a>
+  <a href="/">danielfriis.com</a>
   
     
       / <a href="/notes/">notes</a>
@@ -25,24 +23,21 @@
     
   
 </div>
-      </div>
-      <div class="flex flex-col">
-        <span class="text-xs font-light text-zinc-400">
-          
-            Published <time datetime="2023-11-23T09:35:00+01:00">November 23, 2023</time>
-          
-          
-        </span>
-        <span class="text-xs font-light text-zinc-400 block">
-          &COPY; 2024
-          <a href="/">
-            Daniel Friis
-          </a>
-        </span>
-      </div>
     </header>
     <main aria-label="Content">
+      <section class="pt-10 mb-20 lg:pr-20 flex flex-col gap-3 ">
+        <div class="flex flex-col">
+          <h1 class="text-5xl font-serif mb-3 dark:text-zinc-300">(Re-)connect to Github</h1>
+        </div>
+      </section>
       <div class="formatted-content">
+  <p>
+    
+      Published <time datetime="2023-11-23T09:35:00+01:00">November 23, 2023</time>
+    
+    
+  </p>
+  <div class="pt-6"></div>
   <p>I recently had to reset my computer and get it back up and running for coding which for the most part when super smooth with most things being in the cloud these days.</p>
 
 <p>However, when I had to do my first push after the reset, I received this error:</p>
@@ -117,9 +112,6 @@ Hi USERNAME! You've successfully authenticated, but GitHub does not provide shel
 <p>That’s it! Now, whenever you push to Github it uses your SSH key and life is a breeze again.</p>
 
 </div>
-<div class="mt-10">
-  <a class="text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white" href="/notes">← Back to all notes</a>
-</div>
 <div class="pt-20">
   <p class="text-xs font-light text-zinc-400 dark:text-zinc-400">
     There will be typos, half-baked ideas, and opinions presented as facts here. I'm not a professional writer, and I'm not trying to be one. I'm writing these notes as an exercise to clarify my thinking and archive insights worth revisiting. If you find it useful, that's great. If you don't, that's fine too.
@@ -127,5 +119,13 @@ Hi USERNAME! You've successfully authenticated, but GitHub does not provide shel
 </div>
 
     </main>
+    <footer class="mt-20">
+      <span class="text-xs font-light text-zinc-400 block">
+        &COPY; 2024
+        <a href="/">
+          Daniel Friis
+        </a>
+      </span>
+    </footer>
   </body>
 </html>
