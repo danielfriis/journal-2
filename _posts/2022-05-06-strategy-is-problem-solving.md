@@ -12,7 +12,7 @@ To make matters worse, it seems that [most strategies fail because they are in f
 
 From my experience, goals are most often confused with strategy. A goal disguised as strategy may sound something like: “Our strategy is to become the leading software consultancy in the world”, which is a great aspiration, but nothing but wishful thinking without a proper plan. The problem with such ‘strategies’  is that they don’t guide action and decision-making.
 
-{% include quote.html content="Strategy is not goal-setting — it’s problem-solving." %}
+## Strategy is not goal-setting — it’s problem-solving.
 
 A good strategy should clearly and specifically define the obstacle of a situation and outline a set of coordinated actions to deal with that obstacle. They should make it clear to everyone involved in carrying out the strategy what to do and what not to do.
 
