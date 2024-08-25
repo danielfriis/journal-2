@@ -3,10 +3,19 @@ layout: default
 ---
 
 <div class="formatted-content">
+  <p>
+    {% if page.date %}
+      Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
+    {% endif %}
+    {% if page.modified %}
+      {% if page.modified != page.date %}
+        &mdash; Updated
+        <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%B %e, %Y" }}</time>
+      {% endif %}
+    {% endif %}
+  </p>
+  <div class="pt-6"></div>
   {{ content }}
-</div>
-<div class="mt-10">
-  <a class="text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white" href="{{ site.baseurl }}/notes">← Back to all notes</a>
 </div>
 <div class="pt-20">
   <p class="text-xs font-light text-zinc-400 dark:text-zinc-400">
