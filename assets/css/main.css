@@ -47,7 +47,7 @@
   }
 
   .formatted-content pre.highlight {
-    @apply py-3 px-4 rounded-lg mb-4 bg-neutral-200 dark:bg-zinc-700;
+    @apply py-3 px-4 rounded-lg mb-4 bg-neutral-200/70 dark:bg-zinc-700;
   }
 
   .formatted-content pre.highlight code {
