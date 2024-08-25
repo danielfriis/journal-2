@@ -10,14 +10,14 @@ excerpt: All Notes
 {%- for year in notes_by_year -%}
   <div class="grid grid-cols-10 mb-5">
     <div class="col-span-10 mb-3">
-      <span class="leading-6 text-xs dark:text-white">
+      <span class="leading-6 text-sm dark:text-white">
         {{ year.name }}
       </span>
     </div>
     <div class="col-span-10">
       {%- for post in year.items -%}
         <article class="flex flex-row mb-2">
-          <span class="w-20 leading-6 text-xs font-light text-zinc-400 shrink-0">
+          <span class="w-20 leading-6 text-sm font-light text-zinc-400 shrink-0">
             {{ post.date | date: "%b %e" }}
           </span>
 
