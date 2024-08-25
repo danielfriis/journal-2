@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './_drafts/**/*.html',
@@ -5,36 +7,16 @@ module.exports = {
     './_layouts/**/*.html',
     './_pages/**/*.html',
     './_posts/*.md',
-    './*.md',
-    './*.html',
-    './src/**/*.{html,js}'
-  ],
-  safelist: [
-    'col-span-1',
-    'col-span-2',
-    'col-span-3',
-    'col-span-4',
-    'col-span-5',
-    'col-span-6',
-    'col-span-7',
-    'col-span-8',
-    'col-span-9',
-    'col-span-10',
-    'lg:col-span-1',
-    'lg:col-span-2',
-    'lg:col-span-3',
-    'lg:col-span-4',
-    'lg:col-span-5',
-    'lg:col-span-6',
-    'lg:col-span-7',
-    'lg:col-span-8',
-    'lg:col-span-9',
-    'lg:col-span-10'
+    './*.html'
   ],
   theme: {
-    extend: {
-      fontFamily: {}
-    }
+    fontFamily: {
+      'sans': [...defaultTheme.fontFamily.sans],
+      'serif': [...defaultTheme.fontFamily.serif]
+    },
   },
-  plugins: []
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }
+
