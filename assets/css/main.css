@@ -7,23 +7,23 @@
 
 @layer base {
   .formatted-content p, .formatted-content ol {
-    @apply leading-relaxed text-zinc-600 dark:text-zinc-400 dark:font-light mb-4;
+    @apply leading-relaxed text-zinc-500/90 dark:text-zinc-400 dark:font-light mb-4;
   }
 
   .formatted-content strong {
-    @apply font-semibold;
+    @apply font-medium text-zinc-600 dark:text-zinc-300;
   }
 
-  .formatted-content > figure {
+  .formatted-content figure {
     @apply pt-6;
   }
 
-  .formatted-content > hr {
+  .formatted-content hr {
     @apply my-6;
   }
 
   .formatted-content p a {
-    @apply text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white;
+    @apply text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white;
   }
 
   .formatted-content ol {
