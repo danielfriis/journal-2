@@ -6,8 +6,12 @@
 @tailwind utilities;
 
 @layer base {
-  .formatted-content > p, .formatted-content > ol {
+  .formatted-content p, .formatted-content ol {
     @apply leading-relaxed text-zinc-600 dark:text-zinc-400 dark:font-light mb-4;
+  }
+
+  .formatted-content strong {
+    @apply font-semibold;
   }
 
   .formatted-content > figure {
@@ -19,7 +23,7 @@
   }
 
   .formatted-content p a {
-    @apply text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white underline;
+    @apply text-zinc-600 hover:text-black dark:text-zinc-300 dark:hover:text-white;
   }
 
   .formatted-content ol {

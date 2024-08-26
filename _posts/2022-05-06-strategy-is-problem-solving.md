@@ -8,11 +8,11 @@ image:
 
 I’ve seen many versions of what strategy is and how to do it well but rarely two versions that look the same. Frankly, I’ve been quite confused as words like mission, vision, goals, objectives, and strategy are used interchangeably by most people.
 
-To make matters worse, it seems that [most strategies fail because they are in fact not strategies](https://hbr.org/2017/11/many-strategies-fail-because-theyre-not-actually-strategies). So, those people that talk about strategy often don’t know what strategy is. I hope I’m not joining that choir by writing this note, but instead can be a voice of clarity.
+To make matters worse, it seems that [most strategies fail because they are in fact not strategies](https://hbr.org/2017/11/many-strategies-fail-because-theyre-not-actually-strategies). So, those people talking about strategy often don’t know what strategy is. I hope I’m not joining that choir by writing this note, but instead can be a voice of clarity.
 
-From my experience, goals are most often confused with strategy. A goal disguised as strategy may sound something like: “Our strategy is to become the leading software consultancy in the world”, which is a great aspiration, but nothing but wishful thinking without a proper plan. The problem with such ‘strategies’  is that they don’t guide action and decision-making.
+From my experience, strategy is most often confused with goal-setting. A goal disguised as strategy may sound something like: “Our strategy is to become the leading software consultancy in the world”, which is a great aspiration, but nothing but wishful thinking without a proper plan. The problem with such ‘strategies’ is that they don’t guide action and decision-making which is critical for success.
 
-## Strategy is not goal-setting — it’s problem-solving.
+## Framework
 
 A good strategy should clearly and specifically define the obstacle of a situation and outline a set of coordinated actions to deal with that obstacle. They should make it clear to everyone involved in carrying out the strategy what to do and what not to do.
 
@@ -46,11 +46,11 @@ As a final element of your strategy, you must describe the specific actions whic
 
 ## Common mistakes
 
+**Mistaking goals for strategy.** Many bad strategies are just statements of desire rather than plans for overcoming obstacles.
+
 **Complexity**. A strategy using inflated words and complex ideas, does nothing but create the illusion of strategic thinking. In reality, it's all fluff and no substance. A good strategy is achieved not by adding things, but by removing anything unnecessary and have the essentials stand out.
 
 **Failure to face the real obstacle.** It's important to honestly define the obstacle. If you don't, chances are that you will be working on the wrong things or not allow for the best solution to emerge.
-
-**Mistaking goals for strategy.** Many bad strategies are just statements of desire rather than plans for overcoming obstacles.
 
 **Analysis paralysis.** The world is infinitely complex so describing any part of your strategy with 100% accuracy and certainty is both impossible and counterproductive. You should aim to just get close enough to reality and adjust later as you become wiser.
 
