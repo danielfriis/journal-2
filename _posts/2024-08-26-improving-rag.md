@@ -3,7 +3,7 @@ title: Improving RAG Performance
 date: 2024-08-26 12:03:00 +0100
 ---
 
-By now, most people working with LLMs have either heard of or worked with RAG (Retrieval-Augmented Generation). However, finding good resources on how to make it work well in practice have been challenging to me. This is why I decided to write this article about my own learnings.
+By now, most people working with LLMs have either heard of or worked with RAG (Retrieval-Augmented Generation). However, finding good resources on how to make it work well in practice have been challenging to me. This is why I decided to write this note about my own learnings.
 
 ## Quick RAG introduction
 
