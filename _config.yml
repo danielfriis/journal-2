@@ -1,7 +1,6 @@
 title: "Daniel Friis" # the name of your site, e.g. ACME Corp.
 description: ""
 lang: en-US # default lang
-timezone: Europe/Copenhagen # set your timezone
 
 url: "https://danielfriis.com/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog

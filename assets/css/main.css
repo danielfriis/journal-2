@@ -6,8 +6,33 @@
 @tailwind utilities;
 
 @layer base {
-  .formatted-content p, .formatted-content ol {
-    @apply leading-relaxed text-zinc-500/90 dark:text-zinc-400 dark:font-light mb-4;
+  .formatted-content p, .formatted-content ol, .formatted-content ul {
+    @apply leading-relaxed text-zinc-500/90 dark:text-zinc-400 dark:font-light;
+  }
+
+  .formatted-content p, .formatted-content ol, .formatted-content ul, .formatted-content h2, .formatted-content h3, .formatted-content h4 {
+    @apply mb-6;
+  }
+
+
+  /* Lists */
+
+  .formatted-content ol, .formatted-content ul {
+    @apply list-outside ms-8;
+  }
+
+  .formatted-content ol {
+    @apply list-decimal;
+  }
+
+  .formatted-content ul {
+    @apply list-disc;
+  }
+
+  /* Images */
+
+  .formatted-content p:has(img) {
+    @apply -mx-20 my-10;
   }
 
   .formatted-content strong {
@@ -26,20 +51,16 @@
     @apply text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white;
   }
 
-  .formatted-content ol {
-    @apply list-decimal list-inside;
-  }
-
   .formatted-content h2 {
-    @apply text-2xl text-zinc-800 dark:text-zinc-100 mt-9 mb-3;
+    @apply text-2xl text-zinc-800 dark:text-zinc-100 mt-9;
   }
 
   .formatted-content h3 {
-    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-6 mb-3;
+    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-6;
   }
   
   .formatted-content h4 {
-    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6 mb-3;
+    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6;
   }
 
   .formatted-content code, .formatted-content pre.highlight {
