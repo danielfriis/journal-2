@@ -32,7 +32,7 @@
   /* Images */
 
   .formatted-content p:has(img) {
-    @apply -mx-20 my-10;
+    @apply md:-mx-20 md:my-10;
   }
 
   .formatted-content strong {
