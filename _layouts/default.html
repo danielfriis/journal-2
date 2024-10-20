@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
-  <body class="max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
+  <body class="antialiased max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
     <header class="pt-10 mb-20 overflow-hidden max-w-72">
       {% include breadcrumbs.html %}
     </header>
     <main aria-label="Content">
       <section class="pt-10 mb-20 flex flex-col">
-        <h1 class="text-4xl md:text-5xl font-serif mb-3 dark:text-zinc-300 text-pretty">{{ page.title }}</h1>
+        <h1 class="text-3xl md:text-4xl font-serif mb-3 dark:text-zinc-300 text-pretty">{{ page.title }}</h1>
       </section>
       {{ content }}
     </main>

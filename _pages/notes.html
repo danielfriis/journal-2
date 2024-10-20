@@ -17,8 +17,8 @@ excerpt: All Notes
     <div class="col-span-10">
       {%- for post in year.items -%}
         <article class="flex flex-row mb-2">
-          <span class="w-20 leading-6 text-sm font-light text-zinc-400 shrink-0">
-            {{ post.date | date: "%b %e" }}
+          <span class="w-20 leading-6 text-sm font-light text-zinc-500 shrink-0">
+            {{ post.date | date: "%y-%m-%d" }}
           </span>
 
           <h4 class="leading-6 text-zinc-600 dark:text-zinc-300 dark:hover:text-white dark:font-light grow-0">

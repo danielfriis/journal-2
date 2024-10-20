@@ -52,15 +52,15 @@
   }
 
   .formatted-content h2 {
-    @apply text-2xl text-zinc-800 dark:text-zinc-100 mt-9;
+    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-9;
   }
 
   .formatted-content h3 {
-    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-6;
+    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6;
   }
   
   .formatted-content h4 {
-    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6;
+    @apply text-zinc-800 dark:text-zinc-100 mt-6;
   }
 
   .formatted-content code, .formatted-content pre.highlight {

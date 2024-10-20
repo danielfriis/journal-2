@@ -5,7 +5,7 @@ layout: default
 <div class="formatted-content">
   <p>
     {% if page.date %}
-      Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %e, %Y" }}</time>
+      <time class="text-sm" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%y-%m-%d" }}</time>
     {% endif %}
     {% if page.modified %}
       {% if page.modified != page.date %}
