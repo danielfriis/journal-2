@@ -48,7 +48,7 @@
   }
 
   .formatted-content p a {
-    @apply text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white;
+    @apply text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white underline;
   }
 
   .formatted-content h2 {

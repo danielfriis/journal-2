@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="formatted-content">
-  <p>
+  <p class="text-sm">
     {% if page.date %}
-      <time class="text-sm" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%y-%m-%d" }}</time>
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%y-%m-%d" }}</time>
     {% endif %}
     {% if page.modified %}
       {% if page.modified != page.date %}
