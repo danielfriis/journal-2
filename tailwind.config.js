@@ -12,7 +12,8 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': [...defaultTheme.fontFamily.sans],
-      'serif': [...defaultTheme.fontFamily.serif]
+      'serif': [...defaultTheme.fontFamily.serif],
+      'mono': [...defaultTheme.fontFamily.mono]
     },
   },
   plugins: [
