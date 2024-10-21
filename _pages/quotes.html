@@ -9,13 +9,15 @@ content_cols: 7
 
 
 {%- for quote in site.quotes reversed -%}
-  <div class="grid grid-cols-10 mb-20">
-    <div class="col-span-10 mb-3 lg:col-span-2">
-      <span class="leading-6 text-xs font-light text-zinc-500">{{ quote.id }}</span>
+  <div class="snap-child opacity-0 transition-opacity duration-100">
+    <div class="grid grid-cols-10 mb-20">
+      <div class="col-span-10 mb-3 lg:col-span-2">
+        <span class="leading-6 text-xs font-light text-zinc-500">{{ quote.id }}</span>
+      </div>
+      <div class="col-span-9 lg:col-span-8">
+        {% include quote.html content=quote.content author=quote.author source=quote.source %}
+      </div>
+      <div class="hidden lg:block col-span-3"></div>
     </div>
-    <div class="col-span-9 lg:col-span-8">
-      {% include quote.html content=quote.content author=quote.author source=quote.source %}
-    </div>
-    <div class="hidden lg:block col-span-3"></div>
   </div>
 {%- endfor -%}
