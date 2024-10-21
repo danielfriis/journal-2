@@ -88,15 +88,15 @@
       let lastKnownScrollPosition = window.scrollY;
 
       // Create debug elements
-      const debugTop = document.createElement('div');
-      const debugBottom = document.createElement('div');
-      document.body.appendChild(debugTop);
-      document.body.appendChild(debugBottom);
+      // const debugTop = document.createElement('div');
+      // const debugBottom = document.createElement('div');
+      // document.body.appendChild(debugTop);
+      // document.body.appendChild(debugBottom);
 
       // Style debug elements
-      const debugStyle = 'position: fixed; left: 0; right: 0; height: 2px; background-color: red; z-index: 9999;';
-      debugTop.style = debugStyle;
-      debugBottom.style = debugStyle;
+      // const debugStyle = 'position: fixed; left: 0; right: 0; height: 2px; background-color: red; z-index: 9999;';
+      // debugTop.style = debugStyle;
+      // debugBottom.style = debugStyle;
 
       function updateOpacities() {
         const viewportHeight = window.innerHeight;
@@ -106,17 +106,17 @@
 
         // Calculate the sliding window
         const windowTopStart = 0;
-        const windowBottomStart = 0.7;
+        const windowBottomStart = 0.75;
 
-        const windowTopEnd = 0.4;
+        const windowTopEnd = 0.5;
         const windowBottomEnd = 1;
 
         const windowTop = (windowTopStart + (windowTopEnd - windowTopStart) * scrollProgress) * viewportHeight;
         const windowBottom = (windowBottomStart + (windowBottomEnd - windowBottomStart) * scrollProgress) * viewportHeight;
 
         // Update debug elements
-        debugTop.style.top = `${windowTop}px`;
-        debugBottom.style.top = `${windowBottom}px`;
+        // debugTop.style.top = `${windowTop}px`;
+        // debugBottom.style.top = `${windowBottom}px`;
 
         quotes.forEach(quote => {
           const rect = quote.getBoundingClientRect();
