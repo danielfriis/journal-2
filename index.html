@@ -47,5 +47,65 @@
         </a>
       </span>
     </footer>
+    <script>
+      const quotes = document.querySelectorAll('.snap-child');
+      let lastKnownScrollPosition = window.scrollY;
+
+      function updateOpacities() {
+        const viewportHeight = window.innerHeight;
+        const viewportTop = lastKnownScrollPosition;
+        const viewportBottom = viewportTop + viewportHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        
+        // Calculate how close we are to the bottom (0 at top, 1 at bottom)
+        const scrollProgress = viewportBottom / documentHeight;
+        
+        // Calculate the sliding window
+        const topWindowStart = 0.1; // 20%
+        const topWindowEnd = 0.6; // 50%
+        const bottomWindowStart = 0.4; // 50%
+        const bottomWindowEnd = 0.9; // 80%
+        
+        const windowTop = topWindowStart + (topWindowEnd - topWindowStart) * scrollProgress;
+        const windowBottom = bottomWindowStart + (bottomWindowEnd - bottomWindowStart) * scrollProgress;
+
+        quotes.forEach(quote => {
+          const rect = quote.getBoundingClientRect();
+          const quoteTop = lastKnownScrollPosition + rect.top;
+          const quoteBottom = quoteTop + rect.height;
+
+          // Calculate the percentage of the quote's position in the viewport
+          const topPercentage = (quoteTop - viewportTop) / viewportHeight;
+          const bottomPercentage = (quoteBottom - viewportTop) / viewportHeight;
+
+          let opacity;
+          if (topPercentage >= windowTop && bottomPercentage <= windowBottom) {
+            // Full opacity within the sliding window
+            opacity = 1;
+          } else if (topPercentage < windowTop) {
+            // Fade from 0.2 to 1 towards the top of the window
+            opacity = 0.2 + (0.8 * (topPercentage / windowTop));
+          } else if (bottomPercentage > windowBottom) {
+            // Fade from 1 to 0.2 towards the bottom of the window
+            opacity = 1 - (0.8 * ((bottomPercentage - windowBottom) / (1 - windowBottom)));
+          }
+
+          // Ensure opacity is between 0.2 and 1
+          opacity = Math.max(0.2, Math.min(1, opacity));
+          
+          quote.style.opacity = opacity;
+        });
+
+        requestAnimationFrame(updateOpacities);
+      }
+
+      // Update scroll position without blocking the main thread
+      document.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+      });
+
+      // Start the animation loop
+      requestAnimationFrame(updateOpacities);
+    </script>
   </body>
 </html>
