@@ -7,11 +7,12 @@
       <title>(Re-)connect to Github — Daniel Friis</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="antialiased max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
-    <header class="pt-10 mb-20 overflow-hidden max-w-72">
-      <div class="text-xs font-light text-zinc-400 truncate">
+    <header class="pt-10 overflow-hidden max-w-72">
+      <div class="text-xs default-text-styling truncate">
   
   <a href="/">danielfriis.com</a>
   
@@ -26,18 +27,11 @@
 </div>
     </header>
     <main aria-label="Content">
-      <section class="pt-10 mb-20 flex flex-col">
-        <h1 class="text-3xl md:text-4xl font-serif mb-3 dark:text-zinc-300 text-pretty">(Re-)connect to Github</h1>
+      <section class="my-48 flex flex-col">
+        <h1 class="text-xl mb-3">(Re-)connect to Github</h1>
       </section>
       <div class="formatted-content">
-  <p class="text-sm">
-    
-      <time datetime="2023-11-23T08:35:00+00:00">23-11-23</time>
-    
-    
-  </p>
-  <div class="pt-6"></div>
-  <p>I recently had to reset my computer and get it back up and running for coding which for the most part when super smooth with most things being in the cloud these days.</p>
+  <div class="content"><p>I recently had to reset my computer and get it back up and running for coding which for the most part when super smooth with most things being in the cloud these days.</p>
 
 <p>However, when I had to do my first push after the reset, I received this error:</p>
 
@@ -109,94 +103,54 @@ Hi USERNAME! You've successfully authenticated, but GitHub does not provide shel
 <h3 id="step-5-get-back-to-work">Step 5: Get back to work</h3>
 
 <p>That’s it! Now, whenever you push to Github it uses your SSH key and life is a breeze again.</p>
-
+</div>
 </div>
 <div class="pt-20 flex flex-col gap-y-20">
-  <p class="text-xs font-light text-zinc-400 dark:text-zinc-400">
+  <div class="formatted-content text-xs flex flex-row gap-x-3">
+    <p class="after:content-['•'] after:ml-3">
+      
+        Published on
+        <time datetime="2023-11-23T08:35:00+00:00">23-11-23</time>
+      
+      
+    </p>
+    <p>Read other <a href="/notes">notes</a> or go <a href="/">home</a>.</p>
+  </div>
+  <p class="text-xs default-text-styling">
     There will be typos, half-baked ideas, and opinions presented as facts here. I'm not a professional writer, and I'm not trying to be one. I'm writing these notes as an exercise to clarify my thinking and to archive insights worth revisiting. If you find it useful, that's great. If you don't, that's fine too.
   </p>
-  <div class="text-xs font-light text-zinc-400 dark:text-zinc-400 flex flex-row gap-x-3">
-    <p>Read other <a class="text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white" href="/notes">notes</a> or go <a class="text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white" href="/">home</a>.</p>
-  </div>
 </div>
 
     </main>
-    <footer class="mt-20 flex justify-between">
-      <span class="text-xs font-light text-zinc-400">
-        &COPY; 2024
+    <footer class="mt-20 flex gap-x-2">
+      <span class="text-xs default-text-styling after:content-['•'] after:ml-2">
+        &COPY; 2025
         <a href="/">
           Daniel Friis
         </a>
       </span>
-    </footer>
-    <script>
-      const quotes = document.querySelectorAll('.snap-child');
-      let lastKnownScrollPosition = window.scrollY;
-
-      // Create debug elements
-      // const debugTop = document.createElement('div');
-      // const debugBottom = document.createElement('div');
-      // document.body.appendChild(debugTop);
-      // document.body.appendChild(debugBottom);
-
-      // Style debug elements
-      // const debugStyle = 'position: fixed; left: 0; right: 0; height: 2px; background-color: red; z-index: 9999;';
-      // debugTop.style = debugStyle;
-      // debugBottom.style = debugStyle;
-
-      function updateOpacities() {
-        const viewportHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const maxScroll = documentHeight - viewportHeight;
-        const scrollProgress = Math.min(lastKnownScrollPosition / maxScroll, 1);
-
-        // Calculate the sliding window
-        const windowTopStart = 0;
-        const windowBottomStart = 0.75;
-
-        const windowTopEnd = 0.5;
-        const windowBottomEnd = 1;
-
-        const windowTop = (windowTopStart + (windowTopEnd - windowTopStart) * scrollProgress) * viewportHeight;
-        const windowBottom = (windowBottomStart + (windowBottomEnd - windowBottomStart) * scrollProgress) * viewportHeight;
-
-        // Update debug elements
-        // debugTop.style.top = `${windowTop}px`;
-        // debugBottom.style.top = `${windowBottom}px`;
-
-        quotes.forEach(quote => {
-          const rect = quote.getBoundingClientRect();
-          const quoteTop = rect.top;
-          const quoteBottom = rect.bottom;
-
-          let opacity;
-          if (quoteTop >= windowTop && quoteBottom <= windowBottom) {
-            // Full opacity within the sliding window
-            opacity = 1;
-          } else if (quoteTop < windowTop) {
-            // Fade from 0.2 to 1 towards the top of the window
-            opacity = 0.2 + (0.8 * (quoteTop / windowTop));
-          } else if (quoteBottom > windowBottom) {
-            // Fade from 1 to 0.2 towards the bottom of the window
-            opacity = 1 - (0.8 * ((quoteBottom - windowBottom) / (viewportHeight - windowBottom)));
+      <script>
+        function getTime() {
+          const options = { 
+            timeZone: 'Europe/Lisbon',
+            hour: '2-digit', 
+            minute: '2-digit',
+            hour12: false
+          };
+          return [new Date().toLocaleTimeString('en-US', options), 'WET'].join(' ');
+        }
+      </script>
+      <span class="text-xs default-text-styling" 
+        x-data="{
+          time: getTime(),
+          updateTime() {
+            this.time = getTime();
           }
-
-          // Ensure opacity is between 0.2 and 1
-          opacity = Math.max(0.2, Math.min(1, opacity));
-          
-          quote.style.opacity = opacity;
-        });
-
-        requestAnimationFrame(updateOpacities);
-      }
-
-      // Update scroll position without blocking the main thread
-      document.addEventListener('scroll', function(e) {
-        lastKnownScrollPosition = window.scrollY;
-      });
-
-      // Start the animation loop
-      requestAnimationFrame(updateOpacities);
-    </script>
+        }" 
+        x-init="updateTime(); setInterval(updateTime, 1000)"
+        x-text="time">
+        16:50 WET
+      </span>
+    </footer>
   </body>
 </html>

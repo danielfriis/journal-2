@@ -7,11 +7,12 @@
       <title>Notes to self — Daniel Friis</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
   <body class="antialiased max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
-    <header class="pt-10 mb-20 overflow-hidden max-w-72">
-      <div class="text-xs font-light text-zinc-400 truncate">
+    <header class="pt-10 overflow-hidden max-w-72">
+      <div class="text-xs default-text-styling truncate">
   
   <a href="/">danielfriis.com</a>
   
@@ -22,14 +23,14 @@
 </div>
     </header>
     <main aria-label="Content">
-      <section class="pt-10 mb-20 flex flex-col">
-        <h1 class="text-3xl md:text-4xl font-serif mb-3 dark:text-zinc-300 text-pretty">Notes to self</h1>
+      <section class="my-48 flex flex-col">
+        <h1 class="text-xl mb-3">Notes to self</h1>
       </section>
       <div class="grid grid-cols-10 mb-5">
-    <div class="col-span-10 mb-3">
-      <span class="leading-6 text-sm dark:text-white">
+    <div class="col-span-10 mb-3 border-b border-gray-200 dark:border-zinc-800">
+      <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-100">
         2024
-      </span>
+      </h2>
     </div>
     <div class="col-span-10"><article class="flex flex-row mb-2">
           <span class="w-20 leading-6 text-sm font-light text-zinc-500 shrink-0">
@@ -41,10 +42,10 @@
           </h4>
         </article></div>
   </div><div class="grid grid-cols-10 mb-5">
-    <div class="col-span-10 mb-3">
-      <span class="leading-6 text-sm dark:text-white">
+    <div class="col-span-10 mb-3 border-b border-gray-200 dark:border-zinc-800">
+      <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-100">
         2023
-      </span>
+      </h2>
     </div>
     <div class="col-span-10"><article class="flex flex-row mb-2">
           <span class="w-20 leading-6 text-sm font-light text-zinc-500 shrink-0">
@@ -72,10 +73,10 @@
           </h4>
         </article></div>
   </div><div class="grid grid-cols-10 mb-5">
-    <div class="col-span-10 mb-3">
-      <span class="leading-6 text-sm dark:text-white">
+    <div class="col-span-10 mb-3 border-b border-gray-200 dark:border-zinc-800">
+      <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-100">
         2022
-      </span>
+      </h2>
     </div>
     <div class="col-span-10"><article class="flex flex-row mb-2">
           <span class="w-20 leading-6 text-sm font-light text-zinc-500 shrink-0">
@@ -112,82 +113,35 @@
         </article></div>
   </div>
     </main>
-    <footer class="mt-20 flex justify-between">
-      <span class="text-xs font-light text-zinc-400">
-        &COPY; 2024
+    <footer class="mt-20 flex gap-x-2">
+      <span class="text-xs default-text-styling after:content-['•'] after:ml-2">
+        &COPY; 2025
         <a href="/">
           Daniel Friis
         </a>
       </span>
-    </footer>
-    <script>
-      const quotes = document.querySelectorAll('.snap-child');
-      let lastKnownScrollPosition = window.scrollY;
-
-      // Create debug elements
-      // const debugTop = document.createElement('div');
-      // const debugBottom = document.createElement('div');
-      // document.body.appendChild(debugTop);
-      // document.body.appendChild(debugBottom);
-
-      // Style debug elements
-      // const debugStyle = 'position: fixed; left: 0; right: 0; height: 2px; background-color: red; z-index: 9999;';
-      // debugTop.style = debugStyle;
-      // debugBottom.style = debugStyle;
-
-      function updateOpacities() {
-        const viewportHeight = window.innerHeight;
-        const documentHeight = document.documentElement.scrollHeight;
-        const maxScroll = documentHeight - viewportHeight;
-        const scrollProgress = Math.min(lastKnownScrollPosition / maxScroll, 1);
-
-        // Calculate the sliding window
-        const windowTopStart = 0;
-        const windowBottomStart = 0.75;
-
-        const windowTopEnd = 0.5;
-        const windowBottomEnd = 1;
-
-        const windowTop = (windowTopStart + (windowTopEnd - windowTopStart) * scrollProgress) * viewportHeight;
-        const windowBottom = (windowBottomStart + (windowBottomEnd - windowBottomStart) * scrollProgress) * viewportHeight;
-
-        // Update debug elements
-        // debugTop.style.top = `${windowTop}px`;
-        // debugBottom.style.top = `${windowBottom}px`;
-
-        quotes.forEach(quote => {
-          const rect = quote.getBoundingClientRect();
-          const quoteTop = rect.top;
-          const quoteBottom = rect.bottom;
-
-          let opacity;
-          if (quoteTop >= windowTop && quoteBottom <= windowBottom) {
-            // Full opacity within the sliding window
-            opacity = 1;
-          } else if (quoteTop < windowTop) {
-            // Fade from 0.2 to 1 towards the top of the window
-            opacity = 0.2 + (0.8 * (quoteTop / windowTop));
-          } else if (quoteBottom > windowBottom) {
-            // Fade from 1 to 0.2 towards the bottom of the window
-            opacity = 1 - (0.8 * ((quoteBottom - windowBottom) / (viewportHeight - windowBottom)));
+      <script>
+        function getTime() {
+          const options = { 
+            timeZone: 'Europe/Lisbon',
+            hour: '2-digit', 
+            minute: '2-digit',
+            hour12: false
+          };
+          return [new Date().toLocaleTimeString('en-US', options), 'WET'].join(' ');
+        }
+      </script>
+      <span class="text-xs default-text-styling" 
+        x-data="{
+          time: getTime(),
+          updateTime() {
+            this.time = getTime();
           }
-
-          // Ensure opacity is between 0.2 and 1
-          opacity = Math.max(0.2, Math.min(1, opacity));
-          
-          quote.style.opacity = opacity;
-        });
-
-        requestAnimationFrame(updateOpacities);
-      }
-
-      // Update scroll position without blocking the main thread
-      document.addEventListener('scroll', function(e) {
-        lastKnownScrollPosition = window.scrollY;
-      });
-
-      // Start the animation loop
-      requestAnimationFrame(updateOpacities);
-    </script>
+        }" 
+        x-init="updateTime(); setInterval(updateTime, 1000)"
+        x-text="time">
+        16:50 WET
+      </span>
+    </footer>
   </body>
 </html>
