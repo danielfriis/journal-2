@@ -5,13 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .default-text-styling {
+    @apply leading-relaxed text-zinc-600/90 dark:text-zinc-400 dark:font-light;
+  }
+}
+
 @layer base {
   .formatted-content p, .formatted-content ol, .formatted-content ul {
-    @apply leading-relaxed text-zinc-500/90 dark:text-zinc-400 dark:font-light;
+    @apply default-text-styling hyphens-auto;
   }
 
   .formatted-content p, .formatted-content ol, .formatted-content ul, .formatted-content h2, .formatted-content h3, .formatted-content h4 {
-    @apply mb-6;
+    @apply mb-4;
   }
 
 
@@ -52,7 +58,7 @@
   }
 
   .formatted-content h2 {
-    @apply text-xl text-zinc-800 dark:text-zinc-100 mt-9;
+    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-9;
   }
 
   .formatted-content h3 {

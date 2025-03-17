@@ -11,13 +11,10 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      'sans': [...defaultTheme.fontFamily.sans],
-      'serif': [...defaultTheme.fontFamily.serif],
-      'mono': [...defaultTheme.fontFamily.mono]
+      'sans': ['Inter var', ...defaultTheme.fontFamily.sans]
     },
   },
   plugins: [
     require('@tailwindcss/typography')
   ],
 }
-

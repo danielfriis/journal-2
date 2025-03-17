@@ -2,16 +2,16 @@
 title: Notable wisdom
 slug: quotes
 permalink: /quotes/
-layout: default
+layout: page
 excerpt: All Quotes
 content_cols: 7
 ---
 
 
 {%- for quote in site.quotes reversed -%}
-  <div class="snap-child opacity-0 transition-opacity duration-100">
+  <div class="snap-child">
     <div class="grid grid-cols-10 mb-20">
-      <div class="col-span-10 mb-3 lg:col-span-2">
+      <div class="col-span-10 mb-6 lg:col-span-2">
         <span class="leading-6 text-xs font-light text-zinc-500">{{ quote.id }}</span>
       </div>
       <div class="col-span-9 lg:col-span-8">

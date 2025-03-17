@@ -9,15 +9,18 @@ permalink: /:collection/:title/
 collections:
   posts:
     permalink: /notes/:title/
+    output: true
   quotes:
     sort_by: id
 
 defaults:
-  - values:
-      layout: post
+  - scope:
+      type: posts
+    values:
+      layout: default
 
 plugins:
-  - jekyll-postcss
+  - jekyll-postcss-v2
   - jekyll-sitemap
 
 postcss:

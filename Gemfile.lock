@@ -34,7 +34,7 @@ GEM
       webrick (~> 1.7)
     jekyll-compose (0.12.0)
       jekyll (>= 3.7, < 5.0)
-    jekyll-postcss (0.5.0)
+    jekyll-postcss-v2 (1.0.2)
     jekyll-sass-converter (3.0.0)
       sass-embedded (~> 1.54)
     jekyll-sitemap (1.4.0)
@@ -72,14 +72,18 @@ PLATFORMS
   arm64-darwin-20
   arm64-darwin-21
   arm64-darwin-23
+  arm64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
   jekyll (~> 4.3.2)
   jekyll-compose (~> 0.12.0)
-  jekyll-postcss (~> 0.5.0)
+  jekyll-postcss-v2
   jekyll-sitemap
   webrick (~> 1.8.1)
+
+RUBY VERSION
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.7
