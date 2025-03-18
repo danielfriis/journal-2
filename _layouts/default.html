@@ -6,8 +6,8 @@ layout: base
   <div class="content">{{ content }}</div>
 </div>
 <div class="pt-20 flex flex-col gap-y-20">
-  <div class="formatted-content text-xs flex flex-row gap-x-3">
-    <p class="after:content-['•'] after:ml-3">
+  <div class="formatted-content text-xs flex flex-col md:flex-row gap-x-3">
+    <p class="md:after:content-['•'] after:ml-3">
       {% if page.date %}
         Published on
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%y-%m-%d" }}</time>
