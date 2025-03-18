@@ -14,8 +14,7 @@ layout: base
       {% endif %}
       {% if page.modified %}
         {% if page.modified != page.date %}
-          &mdash; Updated on
-          <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%B %e, %Y" }}</time>
+        (Updated <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%y-%m-%d" }}</time>)
         {% endif %}
       {% endif %}
     </p>
