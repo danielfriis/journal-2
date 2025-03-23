@@ -2,7 +2,7 @@
 title: Competitive Advantage
 ---
 
-I read this story. I can't remember where, but it points out one of the most important things in business.
+I read this story. I can't remember where, but it points out one of the most important aspects of business.
 
 It goes like this:
 
