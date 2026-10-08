@@ -1,5 +1,6 @@
-<div class="mb-5 border-b border-gray-200 dark:border-zinc-800">
+<div class="mb-5 flex justify-between items-baseline border-b border-gray-200 dark:border-zinc-800">
   <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50 pb-1">
     {{ include.title }}
   </h2>
+  {% if include.link %}<a class="text-xs default-text-styling hover:text-black dark:hover:text-white" href="{{ include.link }}">{{ include.link_text }} →</a>{% endif %}
 </div>

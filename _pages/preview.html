@@ -1,6 +1,6 @@
 ---
 title: Daniel Friis
-subtitle: Building <a class="underline hover:text-black dark:hover:text-white" href="https://www.nowadays.tech" target="_blank">Nowadays</a>. Prev. <a class="underline hover:text-black dark:hover:text-white" href="https://www.space10.com" target="_blank">SPACE10</a>.
+subtitle: Building <a class="subtle-link" href="https://www.nowadays.tech" target="_blank">Nowadays</a>. Prev. <a class="subtle-link" href="https://www.space10.com" target="_blank">SPACE10</a>.
 slug: preview
 permalink: /preview/
 layout: page
@@ -8,55 +8,39 @@ noindex: true
 sitemap: false
 ---
 
-<div class="formatted-content mb-16">
-  <p class="text-lg">
-    I'm a technologist, strategist and builder. I work on the application of emerging technologies to solve everyday problems.
-  </p>
-</div>
+<p class="mb-24 text-lg leading-relaxed text-zinc-800 dark:text-zinc-100 dark:font-light text-pretty">
+  I'm a technologist, strategist and builder, based in Lisbon. I write <a class="subtle-link" href="/notes/">notes</a> to clarify my thinking, and keep a list of <a class="subtle-link" href="/quotes/">quotes</a> I like.
+</p>
 
-<section class="mb-16">
+<section class="mb-20">
   {% include section_heading.html title="Work" %}
-  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" tag="current" desc="A minimal venture studio focussed on the application of emerging technologies to solve everyday problems." %}
-  {% include row.html url="https://www.space10.com" external=true title="SPACE10" tag="prev." desc="The concept-innovation lab of IKEA. I was part of building it." %}
+  {% include row.html url="https://www.nowadays.tech" external=true meta="Now" title="Nowadays" desc="A minimal venture studio focussed on the application of emerging technologies to solve everyday problems." %}
+  {% include row.html url="https://www.space10.com" external=true meta="Before" title="SPACE10" desc="The concept-innovation lab of IKEA. I was part of building it." %}
 </section>
 
-<section class="mb-16">
-  {% include section_heading.html title="Notes" %}
+<section class="mb-20">
+  {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
+  {% include section_heading.html title="Notes" link="/notes/" link_text=all_notes %}
   {%- for post in site.posts limit: 5 -%}
     {% assign meta = post.date | date: "%y-%m-%d" %}
-    {% include row.html url=post.url title=post.title desc=post.description meta=meta %}
+    {% include row.html url=post.url meta=meta title=post.title %}
   {%- endfor -%}
-  <p class="mt-3 text-sm default-text-styling">
-    <a class="underline hover:text-black dark:hover:text-white" href="/notes/">All {{ site.posts.size }} notes →</a>
-  </p>
 </section>
 
-<section class="mb-16">
-  {% include section_heading.html title="Quote" %}
+<section class="mb-20">
+  {% capture all_quotes %}All {{ site.quotes.size }}{% endcapture %}
+  {% include section_heading.html title="Quote" link="/quotes/" link_text=all_quotes %}
   {% assign quote = site.quotes | last %}
-  {% include quote.html content=quote.content author=quote.author %}
-  <p class="-mt-6 text-sm default-text-styling">
-    <a class="underline hover:text-black dark:hover:text-white" href="/quotes/">All {{ site.quotes.size }} quotes →</a>
-  </p>
-</section>
-
-<section class="mb-16">
-  {% include section_heading.html title="Currently" %}
-  {% assign latest = site.posts | first %}
-  <dl class="grid grid-cols-[6rem_1fr] gap-y-1 text-sm default-text-styling">
-    <dt class="text-zinc-500">Location</dt><dd>Lisbon, Portugal</dd>
-    <dt class="text-zinc-500">Building</dt><dd><a class="underline hover:text-black dark:hover:text-white" href="https://www.nowadays.tech" target="_blank">Nowadays</a></dd>
-    <dt class="text-zinc-500">Writing</dt><dd><a class="underline hover:text-black dark:hover:text-white" href="{{ latest.url }}">{{ latest.title }}</a></dd>
-  </dl>
-</section>
-
-<section class="p-5 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
-  <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50 mb-1">Say hi</h2>
-  <p class="text-sm default-text-styling mb-4">
-    Feel free to connect with me on either X or LinkedIn.
-  </p>
-  <div class="flex gap-x-2 text-xs">
-    <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://x.com/daniel_friis" target="_blank">X →</a>
-    <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://www.linkedin.com/in/dfriis/" target="_blank">LinkedIn →</a>
+  <div class="flex flex-row py-1">
+    <span class="w-20 shrink-0 leading-6 text-sm font-light text-zinc-500">№ {{ quote.id }}</span>
+    <div class="[&>figure]:mb-0">
+      {% include quote.html content=quote.content author=quote.author %}
+    </div>
   </div>
+</section>
+
+<section>
+  {% include section_heading.html title="Say hi" %}
+  {% include row.html url="https://x.com/daniel_friis" external=true meta="X" title="@daniel_friis" %}
+  {% include row.html url="https://www.linkedin.com/in/dfriis/" external=true meta="LinkedIn" title="dfriis" %}
 </section>
