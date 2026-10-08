@@ -5,16 +5,18 @@ permalink: /preview/
 layout: page
 noindex: true
 sitemap: false
+title_spacing: mt-28 mb-20
 ---
 
-<section class="mb-20">
+<div class="text-sm leading-relaxed">
+<section class="mb-14">
   {% include section_heading.html title="Introduction" %}
-  <p class="text-lg leading-relaxed text-zinc-800 dark:text-zinc-100 dark:font-light text-pretty">
+  <p class="text-base leading-relaxed text-zinc-900 dark:text-zinc-100 dark:font-light text-pretty">
     I'm a technologist, strategist and builder. I work on the application of emerging technologies to everyday problems.
   </p>
 </section>
 
-<section class="mb-20">
+<section class="mb-14">
   {% include section_heading.html title="Work" %}
   {% include row.html title="Stealth startup" meta="2026 – now" desc="Physical AI." %}
   {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="2024 – now" desc="Robotics and AI strategy, primary client IKEA. Tinkering with physical AI, LLMs, real-time voice, RAG and evals." %}
@@ -22,7 +24,7 @@ sitemap: false
   {% include row.html title="Blueprint Learning & Advokurser" meta="2014 – 2017" desc="Co-founder, CTO and board member. Acquired by Reducate." %}
 </section>
 
-<section class="mb-20">
+<section class="mb-14">
   {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
   {% include section_heading.html title="Notes" link="/notes/" link_text=all_notes %}
   {%- for post in site.posts limit: 5 -%}
@@ -31,19 +33,19 @@ sitemap: false
   {%- endfor -%}
 </section>
 
-<section class="mb-20">
+<section class="mb-14">
   {% capture all_quotes %}All {{ site.quotes.size }}{% endcapture %}
   {% include section_heading.html title="Quote" link="/quotes/" link_text=all_quotes %}
   {% assign quote = site.quotes | last %}
-  <div class="[&>figure]:mb-0">
+  <div class="[&>figure]:mb-0 [&_p]:text-base">
     {% include quote.html content=quote.content author=quote.author %}
   </div>
 </section>
 
 <section>
   {% include section_heading.html title="Say hi" %}
-  <div class="p-5 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
-    <p class="text-sm default-text-styling mb-4">
+  <div class="p-4 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
+    <p class="mb-3 text-zinc-500 dark:text-zinc-400">
       Feel free to connect with me on either X or LinkedIn.
     </p>
     <div class="flex gap-x-2 text-xs">
@@ -52,3 +54,4 @@ sitemap: false
     </div>
   </div>
 </section>
+</div>
