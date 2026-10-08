@@ -1,7 +1,8 @@
-<a href="{{ include.url }}"{% if include.external %} target="_blank" rel="noopener"{% endif %} class="group flex gap-x-4 items-baseline justify-between py-1.5">
+{% if include.url %}{% assign tag = "a" %}{% else %}{% assign tag = "div" %}{% endif %}
+<{{ tag }}{% if include.url %} href="{{ include.url }}"{% if include.external %} target="_blank" rel="noopener"{% endif %}{% endif %} class="group flex gap-x-4 items-baseline justify-between py-1.5">
   <span>
-    <span class="text-zinc-800 dark:text-zinc-100 dark:font-light underline decoration-zinc-300 underline-offset-[3px] transition-colors group-hover:decoration-zinc-500 dark:decoration-zinc-600 dark:group-hover:decoration-zinc-400">{{ include.title }}</span>
+    <span class="text-zinc-800 dark:text-zinc-100 dark:font-light{% if include.url %} underline decoration-zinc-300 underline-offset-[3px] transition-colors group-hover:decoration-zinc-500 dark:decoration-zinc-600 dark:group-hover:decoration-zinc-400{% endif %}">{{ include.title }}</span>
     {% if include.desc %}<span class="block text-sm default-text-styling">{{ include.desc }}</span>{% endif %}
   </span>
   {% if include.meta %}<span class="shrink-0 text-sm text-zinc-400 dark:text-zinc-500">{{ include.meta }}</span>{% endif %}
-</a>
+</{{ tag }}>
