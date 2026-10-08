@@ -26,7 +26,7 @@ title_spacing: mt-28 mb-20
 
 <section class="mb-14">
   {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
-  {% include section_heading.html title="Notes" link="/preview/notes/" link_text=all_notes %}
+  {% include section_heading.html title="Notes to self" link="/preview/notes/" link_text=all_notes %}
   {%- for post in site.posts limit: 5 -%}
     {% assign meta = post.date | date: "%b %-d, %Y" %}
     {% assign url = post.url | prepend: "/preview" %}
@@ -36,7 +36,7 @@ title_spacing: mt-28 mb-20
 
 <section class="mb-14">
   {% capture all_quotes %}All {{ site.quotes.size }}{% endcapture %}
-  {% include section_heading.html title="Quote" link="/preview/quotes/" link_text=all_quotes %}
+  {% include section_heading.html title="Quotes" link="/preview/quotes/" link_text=all_quotes %}
   {% assign quote = site.quotes | last %}
   <div class="[&>figure]:mb-0 [&_p]:text-base">
     {% include quote.html content=quote.content author=quote.author %}

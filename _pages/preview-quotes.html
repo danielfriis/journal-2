@@ -1,5 +1,5 @@
 ---
-title: Notable wisdom
+title: Quotes
 slug: quotes
 permalink: /preview/quotes/
 layout: page
@@ -10,7 +10,7 @@ sitemap: false
 
 <div class="text-sm leading-relaxed">
   {%- for quote in site.quotes reversed -%}
-    <div class="flex gap-x-4 items-baseline justify-between py-4 [&>figure]:mb-0 [&_p]:text-base [&_p]:leading-relaxed">
+    <div class="flex gap-x-4 items-baseline justify-between py-6 [&>figure]:mb-0 [&_p]:text-base [&_p]:leading-relaxed">
       {% include quote.html content=quote.content author=quote.author %}
       <span class="shrink-0 text-xs tabular-nums text-zinc-500">{{ quote.id }}</span>
     </div>
