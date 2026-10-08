@@ -18,6 +18,11 @@
     </header>
     <main aria-label="Content">
       <section class="mt-28 mb-20 flex flex-col">
+        {% if page.date %}
+          <p class="mb-2 text-xs text-zinc-500">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.modified and page.modified != page.date %} · Updated <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%b %-d, %Y" }}</time>{% endif %}
+          </p>
+        {% endif %}
         <h1 class="text-xl dark:text-white mb-3">{{ page.title }}</h1>
       </section>
       {{ content }}

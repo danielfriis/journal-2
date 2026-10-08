@@ -5,7 +5,6 @@ layout: base
 <div class="note-content">{{ content }}</div>
 <div class="mt-14 pt-3 border-t border-gray-200 dark:border-zinc-800 flex flex-col gap-y-3 text-xs leading-relaxed text-zinc-500">
   <p>
-    {% if page.date %}Published <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%b %-d, %Y" }}</time>{% endif %}{% if page.modified and page.modified != page.date %}, updated <time datetime="{{ page.modified | date_to_xmlschema }}">{{ page.modified | date: "%b %-d, %Y" }}</time>{% endif %}.
     Read other <a class="subtle-link" href="/notes/">notes</a> or go <a class="subtle-link" href="/">home</a>.
   </p>
   <p>
