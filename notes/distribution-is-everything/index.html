@@ -8,6 +8,7 @@
       <title>Distribution is everything — Daniel Friis</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    
     <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
@@ -98,13 +99,12 @@
       </span>
       <script>
         function getTime() {
-          const options = { 
-            timeZone: 'Europe/Lisbon',
-            hour: '2-digit', 
+          return new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Copenhagen',
+            hour: '2-digit',
             minute: '2-digit',
-            hour12: false
-          };
-          return [new Date().toLocaleTimeString('en-US', options), 'WET'].join(' ');
+            timeZoneName: 'short'
+          });
         }
       </script>
       <span class="text-xs default-text-styling" 
@@ -116,7 +116,7 @@
         }" 
         x-init="updateTime(); setInterval(updateTime, 1000)"
         x-text="time">
-        13:29 WET
+        Copenhagen
       </span>
     </footer>
   </body>

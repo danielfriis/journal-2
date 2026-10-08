@@ -8,6 +8,7 @@
       <title>Daniel Friis</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
+    
     <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
@@ -25,11 +26,10 @@
         
       </section>
       <div class="mb-10">
-  <div class="mb-5 flex justify-between items-baseline border-b border-gray-200 dark:border-zinc-800">
+  <div class="mb-5 border-b border-gray-200 dark:border-zinc-800">
   <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50 pb-1">
     Introduction
   </h2>
-  
 </div>
 
 </div>
@@ -60,13 +60,12 @@
       </span>
       <script>
         function getTime() {
-          const options = { 
-            timeZone: 'Europe/Lisbon',
-            hour: '2-digit', 
+          return new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Copenhagen',
+            hour: '2-digit',
             minute: '2-digit',
-            hour12: false
-          };
-          return [new Date().toLocaleTimeString('en-US', options), 'WET'].join(' ');
+            timeZoneName: 'short'
+          });
         }
       </script>
       <span class="text-xs default-text-styling" 
@@ -78,7 +77,7 @@
         }" 
         x-init="updateTime(); setInterval(updateTime, 1000)"
         x-text="time">
-        13:29 WET
+        Copenhagen
       </span>
     </footer>
   </body>
