@@ -1,9 +1,5 @@
-<a href="{{ include.url }}"{% if include.external %} target="_blank" rel="noopener"{% endif %} class="group grid grid-cols-[1fr_auto] gap-x-4 items-baseline py-3 border-b border-gray-200 dark:border-zinc-800">
-  <span>
-    <span class="font-mono text-sm font-medium text-zinc-800 dark:text-zinc-100 group-hover:text-green-800 dark:group-hover:text-green-400">
-      {{ include.title }}{% if include.tag %}<span class="ml-1.5 align-[1px] text-[11px] font-semibold text-green-800 dark:text-green-400">{{ include.tag }}</span>{% endif %}<span class="font-normal text-zinc-400 opacity-0 transition-opacity group-hover:opacity-100">{% if include.external %} ↗{% else %} →{% endif %}</span>
-    </span>
-    {% if include.desc %}<span class="block mt-0.5 text-sm default-text-styling">{{ include.desc }}</span>{% endif %}
-  </span>
-  {% if include.meta %}<span class="font-mono text-xs text-zinc-400 dark:text-zinc-500 whitespace-nowrap">{{ include.meta }}</span>{% endif %}
+<a href="{{ include.url }}"{% if include.external %} target="_blank" rel="noopener"{% endif %} class="group block py-1.5">
+  <span class="text-zinc-800 dark:text-zinc-100 dark:font-light underline decoration-zinc-300 underline-offset-[3px] transition-colors group-hover:decoration-zinc-500 dark:decoration-zinc-600 dark:group-hover:decoration-zinc-400">{{ include.title }}</span>
+  {% if include.meta %}<span class="ml-1 text-sm text-zinc-400 dark:text-zinc-500">{{ include.meta }}</span>{% endif %}
+  {% if include.desc %}<span class="block text-sm default-text-styling">{{ include.desc }}</span>{% endif %}
 </a>

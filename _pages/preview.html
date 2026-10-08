@@ -1,63 +1,59 @@
 ---
 title: Daniel Friis
-subtitle: Building <a class="subtle-link" href="https://www.nowadays.tech" target="_blank">Nowadays</a>. Prev. <a class="subtle-link" href="https://www.space10.com" target="_blank">SPACE10</a>.
 slug: preview
 permalink: /preview/
 layout: page
-mono: true
 noindex: true
 sitemap: false
 ---
 
-<p class="mb-16 pt-6 border-t border-gray-200 dark:border-zinc-800 text-lg leading-relaxed text-zinc-800 dark:text-zinc-100 dark:font-light text-pretty">
-  I'm a technologist, strategist and builder. I work on the application of <mark class="marker">emerging technologies to everyday problems</mark>. I write <a class="subtle-link" href="/notes/">notes</a> to clarify my thinking, and keep a list of <a class="subtle-link" href="/quotes/">quotes</a> I like.
-</p>
-
-<section class="mb-12">
-  {% include label.html title="Work" %}
-  <div class="border-t border-gray-200 dark:border-zinc-800">
-    {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" desc="A minimal venture studio. Calm company, clear purpose, no excess." meta="now" %}
-    {% include row.html url="https://github.com/danielfriis/ruby_llm-schema" external=true title="RubyLLM::Schema" tag="8M+ downloads" desc="A Ruby DSL for structured output from LLMs. Companion to RubyLLM." meta="2025" %}
-    {% include row.html url="https://www.promptly.so" external=true title="Promptly" desc="Develop, test, and share prompts for LLMs." %}
-    {% include row.html url="https://www.space10.com" external=true title="SPACE10" tag="partner" desc="IKEA's concept-innovation lab. I was part of building it." meta="until 2023" %}
-  </div>
+<section class="mb-20">
+  {% include section_heading.html title="Introduction" %}
+  <p class="text-lg leading-relaxed text-zinc-800 dark:text-zinc-100 dark:font-light text-pretty">
+    I'm a technologist, strategist and builder. I work on the application of emerging technologies to everyday problems. I write <a class="subtle-link" href="/notes/">notes</a> to clarify my thinking, and keep a list of <a class="subtle-link" href="/quotes/">quotes</a> I like.
+  </p>
 </section>
 
-<section class="mb-12">
+<section class="mb-20">
+  {% include section_heading.html title="Work" %}
+  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="Now" desc="A minimal venture studio. Calm company, clear purpose, no excess." %}
+  {% include row.html url="https://github.com/danielfriis/ruby_llm-schema" external=true title="RubyLLM::Schema" meta="2025 · 8M+ downloads" desc="A Ruby DSL for structured output from LLMs. Companion to RubyLLM." %}
+  {% include row.html url="https://www.promptly.so" external=true title="Promptly" desc="Develop, test, and share prompts for LLMs." %}
+  {% include row.html url="https://www.space10.com" external=true title="SPACE10" meta="Until 2023" desc="IKEA's concept-innovation lab. COO, Head of Strategy and Partner. I was part of building it." %}
+  {% include row.html url="https://www.zoios.com" external=true title="Angel investor" desc="Zoios." %}
+</section>
+
+<section class="mb-20">
   {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
-  {% include label.html title="Notes" link="/notes/" link_text=all_notes %}
-  <div class="border-t border-gray-200 dark:border-zinc-800">
-    {%- for post in site.posts limit: 5 -%}
-      {% assign meta = post.date | date: "%b %Y" | downcase %}
-      {% include row.html url=post.url title=post.title meta=meta %}
-    {%- endfor -%}
-  </div>
+  {% include section_heading.html title="Notes" link="/notes/" link_text=all_notes %}
+  {%- for post in site.posts limit: 5 -%}
+    {% assign meta = post.date | date: "%b %-d, %Y" %}
+    {% include row.html url=post.url title=post.title meta=meta %}
+  {%- endfor -%}
 </section>
 
-<section class="mb-12">
+<section class="mb-20">
   {% capture all_quotes %}All {{ site.quotes.size }}{% endcapture %}
-  {% include label.html title="Quote" link="/quotes/" link_text=all_quotes %}
+  {% include section_heading.html title="Quote" link="/quotes/" link_text=all_quotes %}
   {% assign quote = site.quotes | last %}
-  <div class="pt-5 border-t border-gray-200 dark:border-zinc-800 [&>figure]:mb-0">
+  <div class="[&>figure]:mb-0">
     {% include quote.html content=quote.content author=quote.author %}
   </div>
 </section>
 
-<section class="mb-12">
-  {% include label.html title="Currently" %}
+<section class="mb-20">
+  {% include section_heading.html title="Currently" %}
   {% assign latest = site.posts | first %}
-  <dl class="grid grid-cols-[5.5rem_1fr] gap-y-1 px-5 py-4 rounded bg-stone-100 dark:bg-zinc-800/60 font-mono text-[13px] leading-relaxed text-zinc-600 dark:text-zinc-300">
-    <dt class="text-zinc-400 dark:text-zinc-500">location</dt><dd>Copenhagen, Denmark</dd>
-    <dt class="text-zinc-400 dark:text-zinc-500">building</dt><dd><a class="subtle-link" href="https://www.nowadays.tech" target="_blank">Nowadays</a></dd>
-    <dt class="text-zinc-400 dark:text-zinc-500">writing</dt><dd><a class="subtle-link" href="{{ latest.url }}">{{ latest.title }}</a></dd>
+  <dl class="grid grid-cols-[5.5rem_1fr] gap-y-1.5 text-sm">
+    <dt class="text-zinc-400 dark:text-zinc-500">Location</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light">Copenhagen, Denmark</dd>
+    <dt class="text-zinc-400 dark:text-zinc-500">Building</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light"><a class="subtle-link" href="https://www.nowadays.tech" target="_blank">Nowadays</a></dd>
+    <dt class="text-zinc-400 dark:text-zinc-500">Writing</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light"><a class="subtle-link" href="{{ latest.url }}">{{ latest.title }}</a></dd>
   </dl>
 </section>
 
 <section>
-  {% include label.html title="Say hi" %}
-  <div class="border-t border-gray-200 dark:border-zinc-800">
-    {% include row.html url="https://x.com/daniel_friis" external=true title="X" meta="@daniel_friis" %}
-    {% include row.html url="https://www.linkedin.com/in/dfriis/" external=true title="LinkedIn" meta="dfriis" %}
-    {% include row.html url="https://github.com/danielfriis" external=true title="GitHub" meta="danielfriis" %}
-  </div>
+  {% include section_heading.html title="Say hi" %}
+  {% include row.html url="https://x.com/daniel_friis" external=true title="X" meta="@daniel_friis" %}
+  {% include row.html url="https://www.linkedin.com/in/dfriis/" external=true title="LinkedIn" meta="dfriis" %}
+  {% include row.html url="https://github.com/danielfriis" external=true title="GitHub" meta="danielfriis" %}
 </section>

@@ -10,7 +10,6 @@
       <title>{{ page.title | strip_html }} — {{ site.title }}</title>
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-    {% if page.mono %}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">{% endif %}
     <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
@@ -21,7 +20,6 @@
     <main aria-label="Content">
       <section class="my-48 flex flex-col">
         <h1 class="text-xl dark:text-white mb-3">{{ page.title }}</h1>
-        {% if page.subtitle %}<p class="text-sm default-text-styling">{{ page.subtitle }}</p>{% endif %}
       </section>
       {{ content }}
     </main>
