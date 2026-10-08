@@ -1,0 +1,24 @@
+---
+title: Notes to self
+slug: notes
+permalink: /preview/notes/
+layout: page
+title_spacing: mt-28 mb-20
+noindex: true
+sitemap: false
+---
+
+{% assign notes_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<div class="text-sm leading-relaxed">
+  {%- for year in notes_by_year -%}
+    <section class="mb-10">
+      {% include section_heading.html title=year.name %}
+      {%- for post in year.items -%}
+        {% assign meta = post.date | date: "%b %-d" %}
+        {% assign url = post.url | prepend: "/preview" %}
+        {% include row.html url=url title=post.title meta=meta %}
+      {%- endfor -%}
+    </section>
+  {%- endfor -%}
+</div>
