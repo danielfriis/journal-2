@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    
+      <title>My happiness stack — Daniel Friis</title>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="//unpkg.com/alpinejs"></script>
+    <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body class="antialiased max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
+    <header class="pt-10 overflow-hidden max-w-72">
+      <div class="text-xs default-text-styling truncate">
+  
+  <a href="/">danielfriis.com</a>
+  
+    
+      / <a href="/preview/">preview</a>
+    
+  
+    
+      / <a href="/preview/notes/">notes</a>
+    
+  
+    
+      / my-happiness-filter
+    
+  
+</div>
+    </header>
+    <main aria-label="Content">
+      <section class="mt-28 mb-20 flex flex-col">
+        <h1 class="text-xl dark:text-white mb-3">My happiness stack</h1>
+      </section>
+      <div class="note-content"><p>Like most people, I’ve had ups and downs throughout my life. I’ve come to accept them and expect them as part of being human. But recently, I’ve realised how I can set myself up for more happy emotions than sad ones. I’ve named this setup my ‘Happiness Stack’ and it consists of five habits which positively influence the way I experience the world.</p>
+
+<p>On any given day, it’s the small things that may throw me into a high or low; a compliment from a stranger, a ray of sunshine, a misplaced piece of clothing, or the rain when I’m biking. How I feel about any of those situations depends immensely on the condition of my ‘Happiness Stack’.</p>
+
+<p><strong>Exercise</strong></p>
+
+<p>For example, I found that after I’ve exercised, I would generally be in a great mood; confident and optimistic about the future. The list of things to be happy about would be long and the list of things to be sad about would be almost non-existent.</p>
+
+<p><strong>Sleep</strong></p>
+
+<p>On the other hand, whenever I’m feeling discouraged or sad, I’m usually also sleep deprived and tired. Getting enough sleep has proved to be one of the biggest determinants of how I experience the world and so if any of the habits are in conflict for time, this is the one I prioritise.</p>
+
+<p><strong>Socialise</strong></p>
+
+<p>As an introvert, I don’t naturally seek to socialise. But even introverts need to socialise. Being around other people gives me a sense of belonging and going too long without seeing close friends can make me feel quite lonely.</p>
+
+<p><strong>Time alone</strong></p>
+
+<p>On the other hand, spending time alone is an opportunity for me to recharge. I usually do some sort of meditation where I simply sit for 15 min and let thoughts come and go. This declutters my brain and brings a sense of clarity to my mind.</p>
+
+<p><strong>Gratitude</strong></p>
+
+<p>Finally, filling my mind with happy thoughts, means there’s less room for sad thoughts. So, I try to spend five minutes every night listing three good things that happened to me on that day. It’s a great way to end the day, and I usually take those memories with me to bed as I fall asleep.</p>
+
+<hr />
+
+<p>Those five habits above are what make up my Happiness Stack. 9 out of 10 times where I find myself sad or discouraged, it’s because I’ve neglected some of them. Practising the neglected habits will instantly get me back to a good place.</p>
+
+<p>Which habits bring you joy? They are usually easy to relegate and neglect in a busy schedule — but don’t. They are vitally important to your happiness and likely also to your effectiveness.</p>
+</div>
+<div class="mt-14 pt-3 border-t border-gray-200 dark:border-zinc-800 flex flex-col gap-y-3 text-xs leading-relaxed text-zinc-500">
+  <p>
+    Published <time datetime="2022-07-01T06:49:10+00:00">Jul 1, 2022</time>.
+    Read other <a class="subtle-link" href="/preview/notes/">notes</a> or go <a class="subtle-link" href="/preview/">home</a>.
+  </p>
+  <p>
+    There will be typos, half-baked ideas, and opinions presented as facts here. I'm not a professional writer, and I'm not trying to be one. I'm writing these notes as an exercise to clarify my thinking and to archive insights worth revisiting. If you find it useful, that's great. If you don't, that's fine too.
+  </p>
+</div>
+
+    </main>
+    <footer class="mt-20 flex gap-x-2">
+      <span class="text-xs default-text-styling after:content-['•'] after:ml-2">
+        &COPY; 2026
+        <a href="/">
+          Daniel Friis
+        </a>
+      </span>
+      <script>
+        function getTime() {
+          return new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Copenhagen',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZoneName: 'short'
+          });
+        }
+      </script>
+      <span class="text-xs default-text-styling" 
+        x-data="{
+          time: getTime(),
+          updateTime() {
+            this.time = getTime();
+          }
+        }" 
+        x-init="updateTime(); setInterval(updateTime, 1000)"
+        x-text="time">
+        Copenhagen
+      </span>
+    </footer>
+  </body>
+</html>
