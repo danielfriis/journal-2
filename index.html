@@ -3,23 +3,48 @@ layout: page
 title: Daniel Friis
 ---
 
-<div class="mb-10">
+<div class="text-sm leading-relaxed">
+<section class="mb-14">
   {% include section_heading.html title="Introduction" %}
-</div>
-<div class="formatted-content">
-  <p>
-    I'm a technologist, strategist and builder. 
+  <p class="text-base leading-relaxed text-zinc-900 dark:text-zinc-100 dark:font-light text-pretty">
+    I'm a technologist, strategist and builder. I work on the application of emerging technologies to everyday problems.
   </p>
-  <p>
-    I'm currently working on <a href="https://www.nowadays.tech" target="_blank">Nowadays</a>, a minimal venture studio focussed on the application of emerging technologies to solve everyday problems.
-  </p>
-  <p>
-    Before Nowadays, I was part of building <a href="https://www.space10.com" target="_blank">SPACE10</a>, the concept-innovation lab of IKEA.
-  </p>
-  <p>
-    Occasionally I write <a href="/notes/">notes</a> about things I've learned or insights I've had. I also keep a list of <a href="/quotes/">quotes</a> I like.
-  </p>
-  <p>
-    Feel free to connect with me on either <a href="https://x.com/daniel_friis" target="_blank">X</a> or <a href="https://www.linkedin.com/in/dfriis/" target="_blank">LinkedIn</a>.
-  </p>
+</section>
+
+<section class="mb-14">
+  {% include section_heading.html title="Work" %}
+  {% include row.html title="Stealth startup" meta="2026 – now" desc="Robots are changing. More soon." %}
+  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="2024 – now" desc="Robotics and AI strategy, primary client IKEA. Tinkering with physical AI, LLMs, real-time voice, RAG and evals." %}
+  {% include row.html url="https://www.space10.com" external=true title="SPACE10" meta="2015 – 2023" desc="IKEA's research and design lab. Strategic Technologist, Digital Director, Partner & COO, then Partner & Head of Strategy." %}
+  {% include row.html title="Blueprint Learning & Advokurser" meta="2014 – 2017" desc="Co-founder, CTO and board member. Acquired by Reducate." %}
+</section>
+
+<section class="mb-14">
+  {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
+  {% include section_heading.html title="Notes to self" link="/notes/" link_text=all_notes %}
+  {%- for post in site.posts limit: 5 -%}
+    {% assign meta = post.date | date: "%b %-d, %Y" %}
+    {% include row.html url=post.url title=post.title meta=meta %}
+  {%- endfor -%}
+</section>
+
+<section class="mb-14">
+  {% capture all_quotes %}All {{ site.quotes.size }}{% endcapture %}
+  {% include section_heading.html title="Quotes" link="/quotes/" link_text=all_quotes %}
+  {% assign quote = site.quotes | last %}
+  {% include quote.html content=quote.content author=quote.author %}
+</section>
+
+<section>
+  {% include section_heading.html title="Say hi" %}
+  <div class="p-4 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
+    <p class="mb-3 text-zinc-500 dark:text-zinc-400">
+      Feel free to connect with me on either X or LinkedIn.
+    </p>
+    <div class="flex gap-x-2 text-xs">
+      <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://x.com/daniel_friis" target="_blank">X →</a>
+      <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://www.linkedin.com/in/dfriis/" target="_blank">LinkedIn →</a>
+    </div>
+  </div>
+</section>
 </div>

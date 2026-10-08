@@ -1,23 +1,16 @@
 ---
-title: Notable wisdom
+title: Quotes
 slug: quotes
 permalink: /quotes/
 layout: page
 excerpt: All Quotes
-content_cols: 7
 ---
 
-
-{%- for quote in site.quotes reversed -%}
-  <div class="snap-child">
-    <div class="grid grid-cols-10 mb-20">
-      <div class="col-span-10 mb-6 lg:col-span-2">
-        <span class="leading-6 text-xs font-light text-zinc-500">{{ quote.id }}</span>
-      </div>
-      <div class="col-span-9 lg:col-span-8">
-        {% include quote.html content=quote.content author=quote.author source=quote.source %}
-      </div>
-      <div class="hidden lg:block col-span-3"></div>
+<div class="text-sm leading-relaxed">
+  {%- for quote in site.quotes reversed -%}
+    <div class="flex gap-x-4 items-baseline justify-between py-6">
+      {% include quote.html content=quote.content author=quote.author %}
+      <span class="shrink-0 text-xs tabular-nums text-zinc-500">{{ quote.id }}</span>
     </div>
-  </div>
-{%- endfor -%}
+  {%- endfor -%}
+</div>

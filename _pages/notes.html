@@ -8,25 +8,14 @@ excerpt: All Notes
 
 {% assign notes_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
-{%- for year in notes_by_year -%}
-  <div class="grid grid-cols-10 mb-5">
-    <div class="col-span-10 mb-3 border-b border-gray-200 dark:border-zinc-800">
-      <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50 pb-1">
-        {{ year.name }}
-      </h2>
-    </div>
-    <div class="col-span-10">
+<div class="text-sm leading-relaxed">
+  {%- for year in notes_by_year -%}
+    <section class="mb-10">
+      {% include section_heading.html title=year.name %}
       {%- for post in year.items -%}
-        <article class="flex flex-row mb-2">
-          <span class="w-20 leading-6 text-sm font-light text-zinc-500 shrink-0">
-            {{ post.date | date: "%y-%m-%d" }}
-          </span>
-
-          <h4 class="leading-6 text-zinc-600 dark:text-zinc-300 dark:hover:text-white dark:font-light grow-0">
-            <a href="{{ post.url }}">{{ post.title | escape }}</a>
-          </h4>
-        </article>
+        {% assign meta = post.date | date: "%b %-d" %}
+        {% include row.html url=post.url title=post.title meta=meta %}
       {%- endfor -%}
-    </div>
-  </div>
-{%- endfor -%}
+    </section>
+  {%- endfor -%}
+</div>

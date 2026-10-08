@@ -16,81 +16,6 @@
 }
 
 @layer base {
-  .formatted-content p, .formatted-content ol, .formatted-content ul {
-    @apply default-text-styling hyphens-auto;
-  }
-
-  .formatted-content p, .formatted-content ol, .formatted-content ul, .formatted-content h2, .formatted-content h3, .formatted-content h4 {
-    @apply mb-4;
-  }
-
-
-  /* Lists */
-
-  .formatted-content ol, .formatted-content ul {
-    @apply list-outside ms-8;
-  }
-
-  .formatted-content ol {
-    @apply list-decimal;
-  }
-
-  .formatted-content ul {
-    @apply list-disc;
-  }
-
-  /* Images */
-
-  .formatted-content p:has(img) {
-    @apply md:-mx-20 md:my-10;
-  }
-
-  .formatted-content strong {
-    @apply font-medium text-zinc-600 dark:text-zinc-300;
-  }
-
-  .formatted-content figure {
-    @apply pt-6;
-  }
-
-  .formatted-content hr {
-    @apply my-6;
-  }
-
-  .formatted-content p a {
-    @apply text-zinc-800/90 hover:text-black dark:text-zinc-300 dark:hover:text-white underline;
-  }
-
-  .formatted-content h2 {
-    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-9;
-  }
-
-  .formatted-content h3 {
-    @apply text-lg text-zinc-800 dark:text-zinc-100 mt-6;
-  }
-  
-  .formatted-content h4 {
-    @apply text-zinc-800 dark:text-zinc-100 mt-6;
-  }
-
-  .formatted-content code, .formatted-content pre.highlight {
-    @apply whitespace-pre-line text-sm max-w-full;
-  }
-
-  .formatted-content code {
-    @apply py-1 px-1.5 rounded-md text-zinc-700 dark:text-zinc-200 bg-neutral-100 dark:bg-zinc-800;
-  }
-
-  .formatted-content pre.highlight {
-    @apply py-3 px-4 rounded-lg mb-4 bg-neutral-200/70 dark:bg-zinc-700;
-  }
-
-  .formatted-content pre.highlight code {
-    @apply py-0 px-0 bg-transparent dark:bg-transparent rounded-none;
-  }
-
-  /* Note pages in the preview redesign */
-
   .note-content {
     @apply text-sm leading-[1.7] text-zinc-800 dark:text-zinc-200 dark:font-light;
   }
@@ -137,10 +62,6 @@
 
   .note-content figure {
     @apply my-8;
-  }
-
-  .note-content figure blockquote p {
-    @apply text-base leading-relaxed;
   }
 
   .note-content code {
