@@ -1,0 +1,62 @@
+---
+title: Daniel Friis
+subtitle: Building <a class="underline hover:text-black dark:hover:text-white" href="https://www.nowadays.tech" target="_blank">Nowadays</a>. Prev. <a class="underline hover:text-black dark:hover:text-white" href="https://www.space10.com" target="_blank">SPACE10</a>.
+slug: preview
+permalink: /preview/
+layout: page
+noindex: true
+sitemap: false
+---
+
+<div class="formatted-content mb-16">
+  <p class="text-lg">
+    I'm a technologist, strategist and builder. I work on the application of emerging technologies to solve everyday problems.
+  </p>
+</div>
+
+<section class="mb-16">
+  {% include section_heading.html title="Work" %}
+  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" tag="current" desc="A minimal venture studio focussed on the application of emerging technologies to solve everyday problems." %}
+  {% include row.html url="https://www.space10.com" external=true title="SPACE10" tag="prev." desc="The concept-innovation lab of IKEA. I was part of building it." %}
+</section>
+
+<section class="mb-16">
+  {% include section_heading.html title="Notes" %}
+  {%- for post in site.posts limit: 5 -%}
+    {% assign meta = post.date | date: "%y-%m-%d" %}
+    {% include row.html url=post.url title=post.title desc=post.description meta=meta %}
+  {%- endfor -%}
+  <p class="mt-3 text-sm default-text-styling">
+    <a class="underline hover:text-black dark:hover:text-white" href="/notes/">All {{ site.posts.size }} notes →</a>
+  </p>
+</section>
+
+<section class="mb-16">
+  {% include section_heading.html title="Quote" %}
+  {% assign quote = site.quotes | last %}
+  {% include quote.html content=quote.content author=quote.author %}
+  <p class="-mt-6 text-sm default-text-styling">
+    <a class="underline hover:text-black dark:hover:text-white" href="/quotes/">All {{ site.quotes.size }} quotes →</a>
+  </p>
+</section>
+
+<section class="mb-16">
+  {% include section_heading.html title="Currently" %}
+  {% assign latest = site.posts | first %}
+  <dl class="grid grid-cols-[6rem_1fr] gap-y-1 text-sm default-text-styling">
+    <dt class="text-zinc-500">Location</dt><dd>Lisbon, Portugal</dd>
+    <dt class="text-zinc-500">Building</dt><dd><a class="underline hover:text-black dark:hover:text-white" href="https://www.nowadays.tech" target="_blank">Nowadays</a></dd>
+    <dt class="text-zinc-500">Writing</dt><dd><a class="underline hover:text-black dark:hover:text-white" href="{{ latest.url }}">{{ latest.title }}</a></dd>
+  </dl>
+</section>
+
+<section class="p-5 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
+  <h2 class="text-sm font-medium text-zinc-800 dark:text-zinc-50 mb-1">Say hi</h2>
+  <p class="text-sm default-text-styling mb-4">
+    Feel free to connect with me on either X or LinkedIn.
+  </p>
+  <div class="flex gap-x-2 text-xs">
+    <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://x.com/daniel_friis" target="_blank">X →</a>
+    <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://www.linkedin.com/in/dfriis/" target="_blank">LinkedIn →</a>
+  </div>
+</section>

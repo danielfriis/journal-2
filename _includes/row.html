@@ -1,0 +1,9 @@
+<a href="{{ include.url }}"{% if include.external %} target="_blank" rel="noopener"{% endif %} class="group flex flex-row gap-x-4 items-baseline py-1.5 transition-transform duration-200 hover:translate-x-1.5">
+  <span class="grow">
+    <span class="leading-6 text-zinc-700 dark:text-zinc-200 dark:font-light group-hover:text-black dark:group-hover:text-white">
+      {{ include.title }}{% if include.tag %}<span class="ml-2 text-xs text-zinc-500">{{ include.tag }}</span>{% endif %}<span class="ml-1 text-zinc-400 opacity-0 transition-opacity group-hover:opacity-100">{% if include.external %}↗{% else %}→{% endif %}</span>
+    </span>
+    {% if include.desc %}<span class="block text-sm default-text-styling">{{ include.desc }}</span>{% endif %}
+  </span>
+  {% if include.meta %}<span class="shrink-0 leading-6 text-sm font-light text-zinc-500">{{ include.meta }}</span>{% endif %}
+</a>

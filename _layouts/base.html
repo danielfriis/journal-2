@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    {% if page.noindex %}<meta name="robots" content="noindex">{% endif %}
     {% if page.title == site.title %}
       <title>{{ site.title | strip_html }}</title>
     {% else %}
@@ -19,6 +20,7 @@
     <main aria-label="Content">
       <section class="my-48 flex flex-col">
         <h1 class="text-xl dark:text-white mb-3">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="text-sm default-text-styling">{{ page.subtitle }}</p>{% endif %}
       </section>
       {{ content }}
     </main>
