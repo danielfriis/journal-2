@@ -10,6 +10,7 @@
       <title>{{ page.title | strip_html }} — {{ site.title }}</title>
     {% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    {% if page.mono %}<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap">{% endif %}
     <script defer src="//unpkg.com/alpinejs"></script>
     <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
   </head>
@@ -33,13 +34,12 @@
       </span>
       <script>
         function getTime() {
-          const options = { 
-            timeZone: 'Europe/Lisbon',
-            hour: '2-digit', 
+          return new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Copenhagen',
+            hour: '2-digit',
             minute: '2-digit',
-            hour12: false
-          };
-          return [new Date().toLocaleTimeString('en-US', options), 'WET'].join(' ');
+            timeZoneName: 'short'
+          });
         }
       </script>
       <span class="text-xs default-text-styling" 
@@ -51,7 +51,7 @@
         }" 
         x-init="updateTime(); setInterval(updateTime, 1000)"
         x-text="time">
-        {{ site.time | date: '%H:%M' }} WET
+        Copenhagen
       </span>
     </footer>
   </body>
