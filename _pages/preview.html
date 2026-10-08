@@ -16,10 +16,10 @@ sitemap: false
 
 <section class="mb-20">
   {% include section_heading.html title="Work" %}
-  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="Now" desc="A minimal venture studio. Calm company, clear purpose, no excess." %}
-  {% include row.html url="https://github.com/danielfriis/ruby_llm-schema" external=true title="RubyLLM::Schema" meta="2025 · 8M+ downloads" desc="A Ruby DSL for structured output from LLMs. Companion to RubyLLM." %}
+  {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="now" desc="A minimal venture studio. Calm company, clear purpose, no excess." %}
+  {% include row.html url="https://github.com/danielfriis/ruby_llm-schema" external=true title="RubyLLM::Schema" meta="2025" desc="A Ruby DSL for structured output from LLMs. Companion to RubyLLM." %}
   {% include row.html url="https://www.promptly.so" external=true title="Promptly" desc="Develop, test, and share prompts for LLMs." %}
-  {% include row.html url="https://www.space10.com" external=true title="SPACE10" meta="Until 2023" desc="IKEA's concept-innovation lab. COO, Head of Strategy and Partner. I was part of building it." %}
+  {% include row.html url="https://www.space10.com" external=true title="SPACE10" meta="– 2023" desc="IKEA's concept-innovation lab. COO, Head of Strategy and Partner. I was part of building it." %}
   {% include row.html url="https://www.zoios.com" external=true title="Angel investor" desc="Zoios." %}
 </section>
 
@@ -41,19 +41,15 @@ sitemap: false
   </div>
 </section>
 
-<section class="mb-20">
-  {% include section_heading.html title="Currently" %}
-  {% assign latest = site.posts | first %}
-  <dl class="grid grid-cols-[5.5rem_1fr] gap-y-1.5 text-sm">
-    <dt class="text-zinc-400 dark:text-zinc-500">Location</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light">Copenhagen, Denmark</dd>
-    <dt class="text-zinc-400 dark:text-zinc-500">Building</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light"><a class="subtle-link" href="https://www.nowadays.tech" target="_blank">Nowadays</a></dd>
-    <dt class="text-zinc-400 dark:text-zinc-500">Writing</dt><dd class="text-zinc-800 dark:text-zinc-100 dark:font-light"><a class="subtle-link" href="{{ latest.url }}">{{ latest.title }}</a></dd>
-  </dl>
-</section>
-
 <section>
   {% include section_heading.html title="Say hi" %}
-  {% include row.html url="https://x.com/daniel_friis" external=true title="X" meta="@daniel_friis" %}
-  {% include row.html url="https://www.linkedin.com/in/dfriis/" external=true title="LinkedIn" meta="dfriis" %}
-  {% include row.html url="https://github.com/danielfriis" external=true title="GitHub" meta="danielfriis" %}
+  <div class="p-5 rounded-lg bg-stone-100/70 dark:bg-zinc-800/60">
+    <p class="text-sm default-text-styling mb-4">
+      Feel free to connect with me on either X or LinkedIn.
+    </p>
+    <div class="flex gap-x-2 text-xs">
+      <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://x.com/daniel_friis" target="_blank">X →</a>
+      <a class="px-3 py-1.5 rounded-md bg-zinc-800 text-zinc-50 hover:bg-black dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-white" href="https://www.linkedin.com/in/dfriis/" target="_blank">LinkedIn →</a>
+    </div>
+  </div>
 </section>
