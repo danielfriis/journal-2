@@ -5,13 +5,13 @@ description: I've always been chasing the next goal, but I've recently found tha
 image:
 ---
 
-I’ve always been ambitious. Always strived for more; for better grades, better physique, nicer things, bigger job, more wealth. To reach for it, I’ve set goals. Because that’s what you are supposed to do, right? I've often managed to achieve those goals, but I've repeatedly been miserable in the process — especially when I didn’t reach the goals I set.
+I’ve always been ambitious. Always strived for more: for better grades, better physique, nicer things, bigger job, more wealth. To reach for it, I’ve set goals. Because that’s what you are supposed to do, right? I've often managed to achieve those goals, but I've repeatedly been miserable in the process — especially when I didn’t reach the goals I set.
 
 For a long time, I was convinced that this was the way to live your life. Set goals and suffer the hard work towards them. However, I’ve realised that this is a flawed way of living. The problem for me was that I focused so much on the goals that I wasn’t really happy until I reached them. In doing so, I put most of my happiness into some future reward and made my present life more or less miserable.
 
 Beyond living in the future and putting off happiness, it’s also an ineffective way to even reach those goals. The thing is, goals in and of themselves don’t mean a thing. They are just hopes and dreams. It’s the challenges you accept and the practices that you adopt that will get you there.
 
-I recently stumbled upon a quote by the greek stoic philosopher, Epictetus, who once said, “The more we value things outside our control, the less control we have”. That’s precisely the problem with focussing too much on goals. By valuing things that are not real, we lose control and, in turn, jeopardize our happiness.
+I recently stumbled upon a quote by the Greek Stoic philosopher, Epictetus, who once said, “The more we value things outside our control, the less control we have”. That’s precisely the problem with focussing too much on goals. By valuing things that are not real, we lose control and, in turn, jeopardize our happiness.
 
 {% include quote.html content="The more we value things outside our control, the less control we have." author="Epictetus" source="Discourses and Selected Writings" %}
 
@@ -25,4 +25,4 @@ Those that find joy in working out are successful every time they go to the gym 
 
 So, what’s the takeaway here? The way I’ve started to think about it is with this example: if my goal was to become wealthy and I was told that I could do so only by practicing law, I would a) never become wealthy, and b) never be happy, because I cannot find joy in law (I’ve tried), so I will never be good, and therefore never reach my goal. 
 
-Instead, I need to completely reverse my thinking. The goal is not important — it’s the challenge I choose to put my energy into which is important. Choose a challenge you love and whatever rewards you were aiming for initially, are much more likely to materialize. And if they don’t it doesn’t matter — you are already ‘successful’.
+Instead, I need to completely reverse my thinking. The goal is not important — it’s the challenge I choose to put my energy into which is important. Choose a challenge you love, and whatever rewards you were aiming for initially are much more likely to materialize. And if they don’t, it doesn’t matter — you are already ‘successful’.

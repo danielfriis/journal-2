@@ -6,7 +6,7 @@ I read this story. I can't remember where, but it points out one of the most imp
 
 It goes like this:
 
-A marketing professor asked his students, “if you were going to open a hot dog stand, and you could only have ONE advantage over your competitors… which would it be?”
+A marketing professor asked his students, “If you were going to open a hot dog stand, and you could only have ONE advantage over your competitors… which would it be?”
 
 The students replied quickly:
 
