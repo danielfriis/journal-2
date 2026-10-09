@@ -12,10 +12,12 @@ excerpt: All Notes
   {%- for year in notes_by_year -%}
     <section class="mb-10">
       {% include section_heading.html title=year.name %}
+      <div class="rows">
       {%- for post in year.items -%}
         {% assign meta = post.date | date: "%b %-d" %}
         {% include row.html url=post.url title=post.title meta=meta %}
       {%- endfor -%}
+      </div>
     </section>
   {%- endfor -%}
 </div>
