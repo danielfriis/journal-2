@@ -25,7 +25,7 @@ First, you must describe the circumstances you find yourself in. They might be s
 
 
 #### 2) Obstacle
-Next, you must identify the reason for the situation; i.e. the obstacle which is preventing you from reaching a more favorable state. You can do so by asking 'why' and continuing to ask until you reach the core reason for the situation. The trick is to not go so far that your obstacle becomes a solution, or stop so short that your obstacle remains a ‘situation’. As an example, ‘Underperformance’ is not an obstacle; that’s an outcome of your obstacle — i.e. still in the situation realm.
+Next, you must identify the reason for the situation; i.e. the obstacle which is preventing you from reaching a more favourable state. You can do so by asking ‘why’ and continuing to ask until you reach the core reason for the situation. The trick is to not go so far that your obstacle becomes a solution, or stop so short that your obstacle remains a ‘situation’. As an example, ‘Underperformance’ is not an obstacle; that’s an outcome of your obstacle — i.e. still in the situation realm.
 
 Customer satisfaction has dropped 15% — Why? — Because the quality of our product has decreased — Why? — Because we’ve neglected maintenance on our machines
 
@@ -33,7 +33,7 @@ Customer satisfaction has dropped 15% — Why? — Because the quality of our pr
 
 
 #### 3) Approach 
-The next step is to start describing the solution to your obstacle. The approach describes, as a one-liner, the outcome of whatever actions you'll be taking to address the obstacle. It should be specific enough to focus and align those subsequent actions.
+The next step is to start describing the solution to your obstacle. The approach describes, as a one-liner, the outcome of whatever actions you’ll be taking to address the obstacle. It should be specific enough to focus and align those subsequent actions.
 
 *Example: Improve and maintain the condition of our machinery*
 
@@ -48,9 +48,9 @@ As a final element of your strategy, you must describe the specific actions whic
 
 **Mistaking goals for strategy.** Many bad strategies are just statements of desire rather than plans for overcoming obstacles.
 
-**Complexity**. A strategy using inflated words and complex ideas does nothing but create the illusion of strategic thinking. In reality, it's all fluff and no substance. A good strategy is achieved not by adding things, but by removing anything unnecessary and having the essentials stand out.
+**Complexity**. A strategy using inflated words and complex ideas does nothing but create the illusion of strategic thinking. In reality, it’s all fluff and no substance. A good strategy is achieved not by adding things, but by removing anything unnecessary and having the essentials stand out.
 
-**Failure to face the real obstacle.** It's important to honestly define the obstacle. If you don't, chances are that you will be working on the wrong things or not allow for the best solution to emerge.
+**Failure to face the real obstacle.** It’s important to honestly define the obstacle. If you don’t, chances are that you will be working on the wrong things or not allow for the best solution to emerge.
 
 **Analysis paralysis.** The world is infinitely complex, so describing any part of your strategy with 100% accuracy and certainty is both impossible and counterproductive. You should aim to just get close enough to reality and adjust later as you become wiser.
 
@@ -66,7 +66,7 @@ Most people think that focus is about the things you say ‘yes’ to, but in re
 
 ## Weigh-in for buy-in
 
-A perfectly defined strategy is worth nothing if the people responsible for carrying it out don't buy into it. Therefore, the implementation of your strategy begins when you start defining it. 
+A perfectly defined strategy is worth nothing if the people responsible for carrying it out don’t buy into it. Therefore, the implementation of your strategy begins when you start defining it. 
 
 This doesn’t mean that you should build a strategy that everyone agrees with — that would likely backfire and create a strategy which fails to address the real obstacle or lacks the focus to be effective. Instead, you ask questions and test your hypotheses with the people closest to the obstacle and potential solution. 
 

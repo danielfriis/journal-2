@@ -1,12 +1,12 @@
 ---
 title: Being right is not enough
-description: I've always thought that the truth (being objective and indisputable) would win any and all arguments. How could it not?
+description: I’ve always thought that the truth (being objective and indisputable) would win any and all arguments. How could it not?
 date: 2025-03-18
 ---
 
-I've always thought that the truth (being objective and indisputable) would win any and all arguments. How could it not?
+I’ve always thought that the truth (being objective and indisputable) would win any and all arguments. How could it not?
 
-Turns out, it doesn't — and it's proven more true in recent years.
+Turns out, it doesn’t — and it’s proven more true in recent years.
 
 The challenge is that the (objective) truth can become tainted by emotions and beliefs, or be disregarded altogether because of the same.
 
@@ -18,9 +18,9 @@ This is contrary to the facts, which show that nuclear power was much safer than
 
 We know this now, and we knew it then. We had all the facts. We had the truth, but we chose to ignore it.
 
-So, why didn't truth win the debate?
+So, why didn’t truth win the debate?
 
-The reason, I believe, is that people are more swayed by emotions than facts. In a situation where emotions ring stronger than facts, it doesn't matter how right you are; you will lose the argument.
+The reason, I believe, is that people are more swayed by emotions than facts. In a situation where emotions ring stronger than facts, it doesn’t matter how right you are; you will lose the argument.
 
 Anecdotes can be especially convincing. We tend to connect much more with stories than with numbers, which is why they are so powerful.
 

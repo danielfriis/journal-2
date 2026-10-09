@@ -1,8 +1,8 @@
 ---
-title: Competitive Advantage
+title: Competitive advantage
 ---
 
-I read this story. I can't remember where, but it points out one of the most important aspects of business.
+I read this story. I can’t remember where, but it points out one of the most important aspects of business.
 
 It goes like this:
 
@@ -10,11 +10,15 @@ A marketing professor asked his students, “If you were going to open a hot dog
 
 The students replied quickly:
 
-"Location"
-"Quality"
-"Low Prices"
-"Best Taste"
-"More Sauce"
+“Location”
+
+“Quality”
+
+“Low prices”
+
+“Best taste”
+
+“More sauce”
 
 The students kept going until eventually they had run out of answers.
 
@@ -24,5 +28,5 @@ The room finally fell quiet.
 
 The professor smiled and replied:
 
-“A Starving Crowd”
+“A starving crowd”
 
