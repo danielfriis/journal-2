@@ -35,3 +35,6 @@ jekyll_compose:
 include:
   - _pages
   - .htaccess
+
+exclude:
+  - CLAUDE.md
