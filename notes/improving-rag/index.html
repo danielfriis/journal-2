@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     
-      <title>Improving RAG Performance — Daniel Friis</title>
+      <title>Improving RAG performance — Daniel Friis</title>
     
     <link rel="stylesheet" href="/assets/css/main.css">
     <script defer src="//unpkg.com/alpinejs"></script>
@@ -33,7 +33,7 @@
             <time datetime="2024-08-26T11:03:00+00:00">Aug 26, 2024</time>
           </p>
         
-        <h1 class="text-xl dark:text-white mb-3">Improving RAG Performance</h1>
+        <h1 class="text-xl dark:text-white mb-3">Improving RAG performance</h1>
       </section>
       <div class="note-content"><p>By now, most people working with LLMs have either heard of or worked with RAG (Retrieval-Augmented Generation). However, finding good resources on how to make it work well in practice has been challenging for me. This is why I decided to write this note about my own learnings.</p>
 
@@ -51,7 +51,7 @@
 
 <p>This simple setup works well out of the box, but there are ways to significantly improve its performance.</p>
 
-<h2 id="improving-the-retrieval-step">Improving the Retrieval Step</h2>
+<h2 id="improving-the-retrieval-step">Improving the retrieval step</h2>
 
 <p>In my experience, the limiting factor for good RAG performance is the retrieval step. If you can find the right data, the rest of the system usually generates a good response.</p>
 
@@ -65,7 +65,7 @@
 
 <p>At a very high level, you can do this either by manipulating the data or the query. Both approaches are worth exploring, but the latter is usually simplest.</p>
 
-<h2 id="query-manipulation">Query Manipulation</h2>
+<h2 id="query-manipulation">Query manipulation</h2>
 
 <p>There are several techniques you can use to manipulate the query to get it closer in the vector space to your data points.</p>
 
