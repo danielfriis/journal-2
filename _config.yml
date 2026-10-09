@@ -38,3 +38,9 @@ include:
 
 exclude:
   - CLAUDE.md
+  - README.md
+  - mise.toml
+  - package.json
+  - package-lock.json
+  - postcss.config.js
+  - tailwind.config.js
