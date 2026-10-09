@@ -17,6 +17,7 @@ title: Daniel Friis
   {% include row.html url="https://www.nowadays.tech" external=true title="Nowadays" meta="2024 – now" desc="Robotics and AI strategy, primary client IKEA. Tinkering with physical AI, LLMs, real-time voice, RAG and evals." %}
   {% include row.html url="https://www.space10.com" external=true title="SPACE10" meta="2015 – 2023" desc="IKEA's research and design lab. Strategic Technologist, Digital Director, Partner & COO, then Partner & Head of Strategy." %}
   {% include row.html title="Blueprint Learning & Advokurser" meta="2014 – 2017" desc="Co-founder, CTO and board member. Acquired by Reducate." %}
+  {% include more_link.html url="https://www.linkedin.com/in/dfriis/" external=true %}
 </section>
 
 <section class="mb-14">
@@ -25,7 +26,8 @@ title: Daniel Friis
   {%- for post in site.posts limit: 5 -%}
     {% assign meta = post.date | date: "%b %-d, %Y" %}
     {% include row.html url=post.url title=post.title meta=meta %}
-  {%- endfor -%}
+  {%- endfor %}
+  {% include more_link.html url="/notes/" %}
 </section>
 
 <section class="mb-14">
