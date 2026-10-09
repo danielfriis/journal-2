@@ -3,7 +3,7 @@ title: Improving RAG Performance
 date: 2024-08-26 12:03:00 +0100
 ---
 
-By now, most people working with LLMs have either heard of or worked with RAG (Retrieval-Augmented Generation). However, finding good resources on how to make it work well in practice have been challenging to me. This is why I decided to write this note about my own learnings.
+By now, most people working with LLMs have either heard of or worked with RAG (Retrieval-Augmented Generation). However, finding good resources on how to make it work well in practice has been challenging for me. This is why I decided to write this note about my own learnings.
 
 ## Quick RAG introduction
 
@@ -29,7 +29,7 @@ When you embed your data, you create a vector (i.e., numerical) representation o
 
 Therefore, one of the most important tasks in improving the retrieval step is to bring your data points and queries closer in the vector space. Doing that means making them more similar to each other.
 
-Very high-level, you can do this either by manipulating the data or the query. Both approaches are worth exploring, but the latter is usually most simple.
+At a very high level, you can do this either by manipulating the data or the query. Both approaches are worth exploring, but the latter is usually simplest.
 
 ## Query Manipulation
 
@@ -46,7 +46,7 @@ There are several techniques you can use to manipulate the query to get it close
 
 I've found the best results when using a combination of these techniques.
 
-Specifically, I've seen the most success by breaking queries into its components (Query Decomposition), generating hypothetical chunks containing the answer (Hypothetical Document Embeddings), and running the generated queries in parallel (Multi-Query Retrieval). This returns a set of arrays of chunks, which I then rank by their distance to each query to generate a single ranked list of chunks.
+Specifically, I've seen the most success by breaking queries into their components (Query Decomposition), generating hypothetical chunks containing the answer (Hypothetical Document Embeddings), and running the generated queries in parallel (Multi-Query Retrieval). This returns a set of arrays of chunks, which I then rank by their distance to each query to generate a single ranked list of chunks.
 
 It looks something like this:
 

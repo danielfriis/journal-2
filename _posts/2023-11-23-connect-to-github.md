@@ -1,10 +1,10 @@
 ---
-title: (Re-)connect to Github
+title: (Re-)connect to GitHub
 description: 
 date: 2023-11-23 09:35 +0100
 ---
 
-I recently had to reset my computer and get it back up and running for coding which for the most part when super smooth with most things being in the cloud these days.
+I recently had to reset my computer and get it back up and running for coding, which for the most part went super smoothly, with most things being in the cloud these days.
 
 However, when I had to do my first push after the reset, I received this error:
 
@@ -17,9 +17,9 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-After doing a bit of googling, it wasn't really clear to me how to 'log back into' Github. It seemed like it was necessary to add some sort of personal access token.
+After doing a bit of googling, it wasn't really clear to me how to 'log back into' GitHub. It seemed like it was necessary to add some sort of personal access token.
 
-However, I found that the easiest thing was to connect to Github using a SSH key.
+However, I found that the easiest thing was to connect to GitHub using an SSH key.
 
 You set it up like this:
 
@@ -57,11 +57,11 @@ ssh-rsa AAA[...]zQ4Sw== your@email.com
 
 Copy the key to your clipboard (starting with 'ssh-rsa' and ending with 'your@email.com').
 
-### Step 3: Add to Github
+### Step 3: Add to GitHub
 
-1. Go to github.com > Settings > SSH And GPG keys.
+1. Go to github.com > Settings > SSH and GPG keys.
 2. Click 'New SSH Key'.
-3. Give a descriptive title. I'd use something to identify the device/computer your are using.
+3. Give a descriptive title. I'd use something to identify the device/computer you are using.
 4. Select 'Authentication Key' as the key type.
 5. Paste the key.
 6. Click 'Add SSH Key'.
@@ -78,4 +78,4 @@ Hi USERNAME! You've successfully authenticated, but GitHub does not provide shel
 
 ### Step 5: Get back to work
 
-That's it! Now, whenever you push to Github it uses your SSH key and life is a breeze again.
+That's it! Now, whenever you push to GitHub, it uses your SSH key and life is a breeze again.
