@@ -17,7 +17,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-After doing a bit of googling, it wasn't really clear to me how to 'log back into' GitHub. It seemed like it was necessary to add some sort of personal access token.
+After doing a bit of googling, it wasn’t really clear to me how to ‘log back into’ GitHub. It seemed like it was necessary to add some sort of personal access token.
 
 However, I found that the easiest thing was to connect to GitHub using an SSH key.
 
@@ -55,16 +55,16 @@ Next, run this command to read the content of your key: `cat ~/.ssh/id_rsa.pub`
 ssh-rsa AAA[...]zQ4Sw== your@email.com
 ```
 
-Copy the key to your clipboard (starting with 'ssh-rsa' and ending with 'your@email.com').
+Copy the key to your clipboard (starting with ‘ssh-rsa’ and ending with ‘your@email.com’).
 
 ### Step 3: Add to GitHub
 
 1. Go to github.com > Settings > SSH and GPG keys.
-2. Click 'New SSH Key'.
-3. Give a descriptive title. I'd use something to identify the device/computer you are using.
-4. Select 'Authentication Key' as the key type.
+2. Click ‘New SSH Key’.
+3. Give a descriptive title. I’d use something to identify the device/computer you are using.
+4. Select ‘Authentication Key’ as the key type.
 5. Paste the key.
-6. Click 'Add SSH Key'.
+6. Click ‘Add SSH Key’.
 
 ### Step 4: Authenticate
 
@@ -78,4 +78,4 @@ Hi USERNAME! You've successfully authenticated, but GitHub does not provide shel
 
 ### Step 5: Get back to work
 
-That's it! Now, whenever you push to GitHub, it uses your SSH key and life is a breeze again.
+That’s it! Now, whenever you push to GitHub, it uses your SSH key and life is a breeze again.
