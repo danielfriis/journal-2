@@ -2,6 +2,7 @@
 title: (Re-)connect to GitHub
 description: 
 date: 2023-11-23 09:35 +0100
+published: false
 ---
 
 I recently had to reset my computer and get it back up and running for coding, which for the most part went super smoothly, with most things being in the cloud these days.
