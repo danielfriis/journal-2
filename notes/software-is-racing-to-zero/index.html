@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+      <title>Software is racing to zero — Daniel Friis</title>
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script defer src="//unpkg.com/alpinejs"></script>
+    <script defer data-domain="danielfriis.com" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body class="antialiased max-w-screen-sm px-3 mx-auto mt-2 mb-20 bg-stone-50/50 dark:bg-zinc-900 flex flex-col">
+    <header class="pt-10 overflow-hidden max-w-72">
+      <div class="text-xs default-text-styling truncate">
+  
+  <a href="/">danielfriis.com</a>
+  
+    
+      / <a href="/notes/">notes</a>
+    
+  
+    
+      / software-is-racing-to-zero
+    
+  
+</div>
+    </header>
+    <main aria-label="Content">
+      <section class="mt-28 mb-20 flex flex-col">
+        
+          <p class="mb-2 text-xs text-zinc-500">
+            <time datetime="2026-10-13T00:00:00+00:00">Oct 13, 2026</time>
+          </p>
+        
+        <h1 class="text-xl dark:text-white mb-3">Software is racing to zero</h1>
+        
+      </section>
+      <div class="note-content"><p>For most of my career, writing software was the expensive part. You needed a team, months of work, and a lot of money before anyone could use what you built.</p>
+
+<p>That is no longer true. I can describe a tool in a few sentences and have a working version before my coffee gets cold.</p>
+
+<p>And increasingly, nobody describes the tool at all. You ask for a job to be done — reconcile the accounts, plan the trip, find the cheapest supplier — and if the job needs a piece of software, the machine writes it along the way. The software is a by-product. Nobody decided to make it, and nobody needed to know how.</p>
+
+<p>Software always had a marginal cost of zero. Copying it was free. What’s new is that the cost of making it is heading the same way.</p>
+
+<p>When something is free to copy and almost free to make, its price drifts towards the cost of making it. That is where software is going.</p>
+
+<p>To be clear, software isn’t becoming less useful. I use more of it than ever. It’s the part you can charge for that’s shrinking.</p>
+
+<p>So where does the value go? To whatever the code can’t replace. I see three things so far.</p>
+
+<p>The first is compute. Every piece of generated software runs on chips someone has to manufacture, install and cool. You can’t prompt a GPU into existence.</p>
+
+<p>The second is energy. Under the compute sits power, and data centres already queue for years to get a grid connection.</p>
+
+<p>The third is regulated work. A model can write a loan agreement or suggest a diagnosis. It can’t hold a banking licence or answer for the diagnosis when it’s wrong. Where the law demands that someone is accountable, the value stays with whoever holds the licence.</p>
+
+<p>I suspect the list is longer. I’ve <a href="/notes/distribution-is-everything/">written before</a> that even bad ideas work when you get the distribution right. When everyone can build the same product in an afternoon, distribution is what separates them. Trust, proprietary data, and anything that touches the physical world are other candidates.</p>
+
+<p>What they have in common is that they’re scarce, and you can’t generate them.</p>
+
+<p>The other thing I keep thinking about is where all this software will run.</p>
+
+<p>I think most homes will have an AI workstation. A box in a cupboard, without a screen, running a new kind of operating system. Phones, laptops, and whatever we end up wearing on our faces will be thin clients that connect to it.</p>
+
+<p>I already live a version of this. A Mac Studio in my home runs nothing but an AI agent. Nobody looks at its screen. I reach it from my laptop and get the results back as text, files, or pages.</p>
+
+<p>The need for a new operating system follows from the first half of this note. Today’s operating systems exist to run apps that someone else built and you installed. If software costs nothing to make, you stop installing apps. You ask for the job, the machine builds whatever software the job needs, and it throws that software away when you’re done.</p>
+
+<p>That operating system doesn’t manage windows and files. It manages your context: your documents, your history, your preferences, and the credentials to act on your behalf. The interface is a conversation, and the screen is whichever one you happen to be holding.</p>
+
+<p>Why at home and not in the cloud? Your context is the most private data you have, and I’d rather it lived on hardware I own. An agent that works all day is cheaper on a box you’ve paid for than on compute you rent. And it never logs off.</p>
+
+<p>There is a tension with the first half here. If compute is scarce, the biggest models will stay in the data centres that can afford them. I don’t think that breaks the idea. The box at home doesn’t need to run the smartest model. It needs to hold your context and decide what to send where: small models locally, hard problems to the cloud.</p>
+
+<p>It looks a lot like the mainframe era, when terminals connected to one central computer. This time, the central computer is yours.</p>
+</div>
+<div class="mt-14 pt-3 border-t border-gray-200 dark:border-zinc-800 flex flex-col gap-y-3 text-xs leading-relaxed text-zinc-500">
+  <p>
+    Read other <a class="subtle-link" href="/notes/">notes</a> or go <a class="subtle-link" href="/">home</a>.
+  </p>
+  <p>
+    There will be typos, half-baked ideas, and opinions presented as facts here. I'm not a professional writer, and I'm not trying to be one. I'm writing these notes as an exercise to clarify my thinking and to archive insights worth revisiting. If you find it useful, that's great. If you don't, that's fine too.
+  </p>
+</div>
+
+    </main>
+    <footer class="mt-20 flex gap-x-2">
+      <span class="text-xs default-text-styling after:content-['•'] after:ml-2">
+        &COPY; 2026
+        <a href="/">
+          Daniel Friis
+        </a>
+      </span>
+      <script>
+        function getTime() {
+          return new Date().toLocaleTimeString('en-GB', {
+            timeZone: 'Europe/Copenhagen',
+            hour: '2-digit',
+            minute: '2-digit',
+            timeZoneName: 'short'
+          });
+        }
+      </script>
+      <span class="text-xs default-text-styling" 
+        x-data="{
+          time: getTime(),
+          updateTime() {
+            this.time = getTime();
+          }
+        }" 
+        x-init="updateTime(); setInterval(updateTime, 1000)"
+        x-text="time">
+        Copenhagen
+      </span>
+    </footer>
+  </body>
+</html>
