@@ -18,7 +18,9 @@ What you keep are workflows: the routines and processes for jobs you do again an
 
 So the new operating system doesn’t manage windows and files. It manages your context: your documents, your history, your preferences, and the credentials to act on your behalf. The interface is a conversation, and the screen is whichever one you happen to be holding.
 
-Why at home and not in the cloud? Your context is the most private data you have, and I’d rather it lived on hardware I own. An agent that works all day is cheaper on a box you’ve paid for than on compute you rent. And it never logs off.
+Why a separate box? If the AI runs your books, it can’t stop when you close your laptop. Invoices arrive at night, and payments fall due at weekends. The agent needs a machine that is always on.
+
+That machine could live in the cloud. I’d rather it lived at home. Your context is the most private data you have, and I want it on hardware I own. An agent that works all day is also cheaper on a box you’ve paid for than on compute you rent.
 
 There is a tension here. In the same note, I argued that compute is one of the few things that keeps its value. If compute is scarce, the biggest models will stay in the data centres that can afford them. I don’t think that breaks the idea. The box at home doesn’t need to run the smartest model. It needs to hold your context and decide what to send where: small models locally, hard problems to the cloud.
 
