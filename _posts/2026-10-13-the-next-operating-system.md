@@ -22,6 +22,6 @@ Why a separate box? If the AI runs your books, it can’t stop when you close yo
 
 That machine could live in the cloud. I’d rather it lived at home. Your context is the most private data you have, and I want it on hardware I own. An agent that works all day is also cheaper on a box you’ve paid for than on compute you rent.
 
-There is a tension here. In the same note, I argued that compute is one of the few things that keeps its value. If compute is scarce, the biggest models will stay in the data centres that can afford them. I don’t think that breaks the idea. The box at home doesn’t need to run the smartest model. It needs to hold your context and decide what to send where: small models locally, hard problems to the cloud.
+There is a tension here. In the same note, I argued that compute is one of the few things that keeps its value. If compute is scarce, the biggest models will stay in the data centres that can afford them. I don’t think that breaks the idea. The box at home doesn’t need to run the smartest model. It holds your context, and its local model orchestrates the work and handles anything sensitive. Complex work goes to frontier models in the cloud.
 
 It looks a lot like the mainframe era, when terminals connected to one central computer. This time, the central computer is yours.
