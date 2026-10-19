@@ -1,7 +1,7 @@
 ---
 title: The next operating system
 description: Most homes will have an AI workstation without a screen. Every other device becomes a thin client.
-date: 2026-10-13
+date: 2026-10-18
 ---
 
 I think most homes will have an AI workstation. A box in a cupboard, without a screen, running a new kind of operating system. Phones, laptops, and whatever we end up wearing on our faces will be thin clients that connect to it.
