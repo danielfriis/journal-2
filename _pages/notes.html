@@ -6,7 +6,8 @@ layout: page
 excerpt: All Notes
 ---
 
-{% assign notes_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign listed_posts = site.posts | where_exp: "post", "post.unlisted != true" %}
+{% assign notes_by_year = listed_posts | group_by_exp: "post", "post.date | date: '%Y'" %}
 
 <div class="text-sm leading-relaxed">
   {%- for year in notes_by_year -%}

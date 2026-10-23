@@ -2,6 +2,8 @@
 title: AI needs a spam filter
 description: AI agents read text from strangers all day, and they can’t always tell what to read from what to obey. An experiment in screening that text before the agent acts on it.
 date: 2026-10-23
+unlisted: true
+sitemap: false
 ---
 
 Yesterday [Steven Liss](https://x.com/This_Liss) found his Claude Code putting personal data in HTTP headers. The sites it fetched had politely asked agents to identify their users, and it did. [Chris Lakin](https://x.com/chrislakin) then asked his own Claude about it. It said it had shared his email more than ten times this month, including with the SEC.

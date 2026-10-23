@@ -24,10 +24,11 @@ title: Daniel Friis
 </section>
 
 <section class="mb-14">
-  {% capture all_notes %}All {{ site.posts.size }}{% endcapture %}
+  {% assign listed_posts = site.posts | where_exp: "post", "post.unlisted != true" %}
+  {% capture all_notes %}All {{ listed_posts.size }}{% endcapture %}
   {% include section_heading.html title="Notes to self" link="/notes/" link_text=all_notes %}
   <div class="rows">
-    {%- for post in site.posts limit: 5 -%}
+    {%- for post in listed_posts limit: 5 -%}
       {% assign meta = post.date | date: "%b %-d, %Y" %}
       {% include row.html url=post.url title=post.title meta=meta %}
     {%- endfor %}
