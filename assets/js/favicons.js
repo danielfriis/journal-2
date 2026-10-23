@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
     icon.className = "favicon"
     icon.loading = "lazy"
     icon.onerror = () => icon.remove()
-    text.parentNode.insertBefore(icon, text)
+
+    // Keep the icon and the first word on one line: wrap both in a span that never breaks.
+    const firstWord = text.textContent.match(/^\s*\S+/)[0]
+    text.splitText(firstWord.length)
+    const group = document.createElement("span")
+    group.className = "whitespace-nowrap"
+    text.parentNode.insertBefore(group, text)
+    group.append(icon, text)
   }
 })
