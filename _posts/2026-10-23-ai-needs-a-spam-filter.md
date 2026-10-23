@@ -51,7 +51,7 @@ It doesn’t catch everything. In Superagent’s own tests, it caught 99.8% of t
 
 ## Proxying your agent
 
-The filter can’t live inside the agent. If a web page has talked the model into something, asking the same model to check itself doesn’t help much. It has to be a separate thing.
+The filter can’t live inside the agent. If a web page has talked the model into something, asking the same model to check itself doesn’t help much. It would be like asking someone who just fell for a phishing email whether the email looked legit. The check has to come from somewhere else.
 
 ![Packages from web pages, search results, MCP tools and CLI output travel towards a round screen. Most pass through to the agent. Two red ones stop at the screen.](/assets/images/ai-spam-filter/screen.png)
 
