@@ -39,6 +39,8 @@ I think agents need the same thing, so I’ve been running a small experiment to
 
 ## Where the filter sits
 
+![Packages from web pages, search results, MCP tools and CLI output travel towards a round screen. Most pass through to the agent. Two red ones stop at the screen.](/assets/images/ai-spam-filter/screen.png)
+
 The filter can’t live inside the agent. If a web page has talked the model into something, asking the same model to check itself doesn’t help much. It has to be a separate thing.
 
 Claude Code makes this easy. The `ANTHROPIC_BASE_URL` setting decides where it sends its requests. Point it at a proxy on your own machine, and every request goes through the proxy before it reaches Anthropic.
@@ -53,13 +55,11 @@ A small model trained for one narrow job fits better. Superagent’s [Security-O
 
 It doesn’t catch everything. In Superagent’s own tests, it caught 99.8% of the attacks in one benchmark and 78% in another. It’s fast, though. When I measured it, a normal page took about half a second to check, and a very long one a little over a second. The check runs alongside the request, so the agent doesn’t wait for it.
 
-## Agent Screen
+## Introducing Agent Screen
 
 I combined the two in a small Mac menu bar app called [Agent Screen](https://github.com/nowadays-tech/agent-screen). It runs the proxy, sends the outside text the agent reads to Security-One, and turns the shield in the menu bar red when something scores high. It also logs what it flagged and where the text came from.
 
-![Packages from web pages, search results, MCP tools and CLI output travel towards a round screen. Most pass through to the agent. Two red ones stop at the screen.](/assets/images/ai-spam-filter/screen.png)
-
-The drawing shows where I want to take it. Right now it only watches. Every request goes through unchanged, and it flags what looks suspicious. It doesn’t block anything yet, because I want to see what it would have blocked before I let it.
+The drawing above shows where I want to take it. Right now it only watches. Every request goes through unchanged, and it flags what looks suspicious. It doesn’t block anything yet, because I want to see what it would have blocked before I let it.
 
 This is an experiment, not a security product. It hasn’t been tested against real attacks, and I wouldn’t rely on it. What I want to find out is how many of the flags turn out to be real.
 
