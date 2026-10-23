@@ -76,7 +76,7 @@
 
   /* A post from X, rendered locally so it survives deletion and loads no X scripts. */
   .note-content .tweet {
-    @apply max-w-lg py-3 px-4 rounded-xl border border-zinc-200 bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100;
+    @apply max-w-lg mx-auto py-3 px-4 rounded-xl border border-zinc-200 bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100;
   }
 
   .note-content .tweet header {
