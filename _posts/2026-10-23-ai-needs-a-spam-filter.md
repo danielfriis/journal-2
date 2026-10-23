@@ -50,7 +50,7 @@ Many people see the potential of these smaller, quicker and more affordable deci
 
 It doesn’t catch everything. In Superagent’s own tests, it caught 99.8% of the attacks in one benchmark and 78% in another. It’s fast, though. When I measured it, a normal page took about half a second to check, and a very long one a little over a second. The check runs alongside the request, so the agent doesn’t wait for it.
 
-## The last piece of the puzzle
+## Proxying your agent
 
 The filter can’t live inside the agent. If a web page has talked the model into something, asking the same model to check itself doesn’t help much. It has to be a separate thing.
 
