@@ -61,7 +61,8 @@
     @apply font-medium text-zinc-900 dark:text-zinc-50;
   }
 
-  .note-content p:has(img) {
+  /* Only paragraphs that are just an image break out wide; a favicon inside a link does not count. */
+  .note-content p:has(> img) {
     @apply my-8 md:-mx-20;
   }
 
