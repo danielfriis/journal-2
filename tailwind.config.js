@@ -7,6 +7,7 @@ module.exports = {
     './_layouts/**/*.html',
     './_pages/**/*.html',
     './_posts/*.md',
+    './assets/js/*.js',
     './*.html'
   ],
   theme: {

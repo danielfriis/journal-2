@@ -15,6 +15,10 @@
     @apply grid grid-cols-[1fr_auto] gap-x-8;
   }
 
+  .favicon {
+    @apply inline-block size-3.5 mr-1 -mt-0.5 align-middle rounded-sm;
+  }
+
   .subtle-link {
     @apply underline decoration-dotted decoration-zinc-300 underline-offset-[3px] transition-colors hover:text-black hover:decoration-zinc-500 dark:decoration-zinc-600 dark:hover:text-white dark:hover:decoration-zinc-400;
   }
@@ -69,32 +73,65 @@
     @apply my-8;
   }
 
-  .note-content figure.tweet blockquote {
-    @apply py-4 px-5 rounded border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/50;
+  /* A post from X, rendered locally so it survives deletion and loads no X scripts. */
+  .note-content .tweet {
+    @apply max-w-lg py-3 px-4 rounded-xl border border-zinc-200 bg-white text-zinc-900 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100;
   }
 
-  .note-content figure.tweet p {
-    @apply mb-2;
+  .note-content .tweet header {
+    @apply flex items-center gap-2.5;
   }
 
-  .note-content .tweet-author {
-    @apply font-medium text-zinc-900 dark:text-zinc-50;
+  .note-content .tweet-avatar {
+    @apply size-10 rounded-full;
   }
 
-  .note-content .tweet-author span {
+  .note-content .tweet-name {
+    @apply flex items-center gap-0.5 font-semibold leading-tight;
+  }
+
+  .note-content .tweet-handle {
     @apply font-normal text-zinc-500;
   }
 
-  .note-content .tweet-quoted {
-    @apply mt-3 py-3 px-4 rounded border border-zinc-200 dark:border-zinc-700;
+  .note-content .tweet-badge {
+    @apply size-4 fill-sky-500;
   }
 
-  .note-content .tweet-quoted p:last-child {
+  .note-content .tweet-logo {
+    @apply ml-auto size-4 self-start fill-current;
+  }
+
+  .note-content .tweet p {
     @apply mb-0;
   }
 
-  .note-content figure.tweet figcaption {
-    @apply mt-2 text-xs text-zinc-500;
+  .note-content .tweet-text {
+    @apply mt-3 text-[15px] leading-normal;
+  }
+
+  .note-content .tweet-quoted {
+    @apply mt-3 py-2.5 px-3 rounded-xl border border-zinc-200 dark:border-zinc-700;
+  }
+
+  .note-content .tweet-quoted header {
+    @apply gap-1.5;
+  }
+
+  .note-content .tweet-quoted .tweet-avatar {
+    @apply size-5;
+  }
+
+  .note-content .tweet-quoted .tweet-text {
+    @apply mt-1 text-sm;
+  }
+
+  .note-content .tweet-meta {
+    @apply mt-3 text-sm text-zinc-500;
+  }
+
+  .note-content .tweet-meta a {
+    @apply no-underline hover:underline;
   }
 
   .note-content code {
