@@ -69,6 +69,34 @@
     @apply my-8;
   }
 
+  .note-content figure.tweet blockquote {
+    @apply py-4 px-5 rounded border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-800/50;
+  }
+
+  .note-content figure.tweet p {
+    @apply mb-2;
+  }
+
+  .note-content .tweet-author {
+    @apply font-medium text-zinc-900 dark:text-zinc-50;
+  }
+
+  .note-content .tweet-author span {
+    @apply font-normal text-zinc-500;
+  }
+
+  .note-content .tweet-quoted {
+    @apply mt-3 py-3 px-4 rounded border border-zinc-200 dark:border-zinc-700;
+  }
+
+  .note-content .tweet-quoted p:last-child {
+    @apply mb-0;
+  }
+
+  .note-content figure.tweet figcaption {
+    @apply mt-2 text-xs text-zinc-500;
+  }
+
   .note-content code {
     @apply py-0.5 px-1.5 rounded text-[13px] text-zinc-700 dark:text-zinc-200 bg-neutral-100 dark:bg-zinc-800;
   }
