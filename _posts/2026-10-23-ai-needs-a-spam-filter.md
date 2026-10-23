@@ -40,7 +40,7 @@ Nobody solved that by reading their mail more carefully. We solved it with filte
 
 I think agents need the same thing, so I’ve been running a small experiment to see what it could look like.
 
-## Who decides
+## A new type of spam filter
 
 It’s not feasible to build this type of filter without some sort of intelligence, because the attacks are far from trivial. You could ask a frontier model to judge every tool result, but that would be both slow and very expensive. Luckily, a new type of intelligence has been made popular by [Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) from TypeSafe — the decision model.
 
