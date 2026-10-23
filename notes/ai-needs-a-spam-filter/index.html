@@ -39,7 +39,7 @@
         <h1 class="text-xl dark:text-white mb-3">AI needs a spam filter</h1>
         
       </section>
-      <div class="note-content"><p>Yesterday, <a href="https://x.com/This_Liss">Steven Liss</a> noticed that his Claude Code was putting personal data into HTTP headers. The sites it fetched had politely asked agents to identify their users, so it did. Chris Lakin then asked his own Claude about it:</p>
+      <div class="note-content"><p>Yesterday, <a href="https://x.com/This_Liss">Steven Liss</a> noticed that his Claude Code was putting personal data into HTTP headers. The sites it fetched had politely asked agents to identify their users, so it did. Chris Lakin then asked his own Claude about it and it happily admitted to have shared his email more than 10 times this month.</p>
 
 <figure class="tweet" data-no-favicon="">
   <header>
@@ -62,15 +62,29 @@
   <p class="tweet-meta"><a href="https://x.com/chrislakin/status/2113358733548081528">9:56 PM · Oct 22, 2026</a></p>
 </figure>
 
-<p>A model’s account of what it did last month isn’t proof of anything. But the trick itself is simple. Nobody hacked anything. The page asked, and the agent did what it was told.</p>
+<p>A model’s account of what it did last month isn’t proof of anything but with the speed with which agents operate and the parallelism with which they operate, make it impossible for a human to know and verify what gets passed to the model.</p>
 
-<p>My agents read web pages, search results, GitHub issues and command-line output all day. Most of that text is written by people I don’t know. And a language model can’t reliably tell the difference between text it should read and text it should obey. An instruction hidden in a web page looks a lot like one from me.</p>
+<p>My own agents read web pages, search results, GitHub issues and command-line output all day and I wouldn’t have a chance to know if all of it can be trusted. It doesn’t even have to be in plain sight, it can hide in code somewhere, non-obvious to humans and reach the agent like any other piece of text.</p>
 
-<p>It reminds me of email spam. Once sending an email cost almost nothing, inboxes filled up. Nobody solved that by reading their mail more carefully. We solved it with filters that look at every message before we do.</p>
+<p>This calls for a new type of defence.</p>
+
+<p>As the cost of using agents for ill intent goes down [insert the hacking cost example], we approach the same inflection point that happened with email. When the cost of sending an email approached zero, the amount of spam reaching people’s inboxes exploded.</p>
+
+<p>Nobody solved that by reading their mail more carefully. We solved it with filters that look at every message before we do.</p>
 
 <p>I think agents need the same thing, so I’ve been running a small experiment to see what it could look like.</p>
 
-<h2 id="where-the-filter-sits">Where the filter sits</h2>
+<h2 id="who-decides">Who decides</h2>
+
+<p>It’s not feasible to build this type of filter without some sort of intelligence since the sophistication of the potential attack is beyond trivial. You could ask a frontier model to judge every tool result but that would be both slow and very expensive. Luckily, a new type of intelligence have been made popular by Jev [insert link] — the decision model.</p>
+
+<p>The decision model is a [insert short description].</p>
+
+<p>Many people see the potential of these smaller, quicker, and more affordable decision models and have been fine-tuning their own for various purposes. One of those, is  Superagent’s <a href="https://www.superagent.sh/docs/models/security-one">Security-One</a>. It’s an open-weights model with 27 billion parameters, fine-tuned for security triage. You give it a piece of text, and it returns the probability that the text is unsafe.</p>
+
+<p>It doesn’t catch everything. In Superagent’s own tests, it caught 99.8% of the attacks in one benchmark and 78% in another. It’s fast, though. When I measured it, a normal page took about half a second to check, and a very long one a little over a second. The check runs alongside the request, so the agent doesn’t wait for it.</p>
+
+<h2 id="the-last-piece-of-the-puzzle">The last piece of the puzzle</h2>
 
 <p>The filter can’t live inside the agent. If a web page has talked the model into something, asking the same model to check itself doesn’t help much. It has to be a separate thing.</p>
 
@@ -78,19 +92,9 @@
 
 <p>Claude Code makes this easy. The <code class="language-plaintext highlighter-rouge">ANTHROPIC_BASE_URL</code> setting decides where it sends its requests. Point it at a proxy on your own machine, and every request goes through the proxy before it reaches Anthropic.</p>
 
-<p>When the agent uses a tool, like fetching a page or calling an MCP server, the result goes to the model in the next request. So the proxy sees everything the agent reads, and the agent itself doesn’t have to change.</p>
+<p>When the agent uses a tool, like fetching a page or calling an MCP server, the result goes to the model in the next request. So the proxy sees everything that reaches the agent.</p>
 
-<h2 id="who-decides">Who decides</h2>
-
-<p>You could ask a frontier model to judge every tool result. It would be slow and expensive, and you’d pay for it on every read. A spam filter that slows you down or costs more than the mail gets turned off.</p>
-
-<p>A small model trained for one narrow job fits better. Superagent’s <a href="https://www.superagent.sh/docs/models/security-one">Security-One</a> is one of those. It’s an open-weights model with 27 billion parameters, fine-tuned for security triage. You give it a piece of text, and it returns the probability that the text is unsafe.</p>
-
-<p>It doesn’t catch everything. In Superagent’s own tests, it caught 99.8% of the attacks in one benchmark and 78% in another. It’s fast, though. When I measured it, a normal page took about half a second to check, and a very long one a little over a second. The check runs alongside the request, so the agent doesn’t wait for it.</p>
-
-<h2 id="introducing-agent-screen">Introducing Agent Screen</h2>
-
-<p>I combined the two in a small Mac menu bar app called <a href="https://github.com/nowadays-tech/agent-screen">Agent Screen</a>. It runs the proxy, sends the outside text the agent reads to Security-One, and turns the shield in the menu bar red when something scores high. It also logs what it flagged and where the text came from.</p>
+<p>I combined the proxy and Security-One in a small Mac menu bar app called <a href="https://github.com/nowadays-tech/agent-screen">Agent Screen</a>. It runs the proxy, sends the outside text the agent reads to Security-One, and turns the shield in the menu bar red when something scores high. It also logs what it flagged and where the text came from.</p>
 
 <p>The drawing above shows where I want to take it. Right now it only watches. Every request goes through unchanged, and it flags what looks suspicious. It doesn’t block anything yet, because I want to see what it would have blocked before I let it.</p>
 
@@ -141,6 +145,10 @@ open ~/Applications/<span class="s2">"Agent Screen.app"</span>
 </code></pre></div></div>
 
 <p>To stop, remove the setting and quit the app.</p>
+
+<h2 id="whats-next">What’s next</h2>
+
+<p>This was just a quick stray thought of mine turned into an experiment, but I’m curious to see where the industry goes. I could foresee small models like these run on device. It would make any model safe(r) — theoretically at least.</p>
 </div>
 <div class="mt-14 pt-3 border-t border-gray-200 dark:border-zinc-800 flex flex-col gap-y-3 text-xs leading-relaxed text-zinc-500">
   <p>
